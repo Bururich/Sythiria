@@ -69,6 +69,7 @@ nav {
 .nav-links li {
     position: relative;
 }
+
 .nav-item {
     color: var(--text-color);
     padding: 18px 15px;
@@ -612,4 +613,114 @@ nav {
   width: 1000px;
   height: 600px;
   object-fit: cover;
+}
+
+/* Contact us Section*/
+.contact-us {
+  display: grid;
+  grid-template-columns: 1fr auto; /* текст + картинка */
+  align-items: stretch; /* чтобы картинка растягивалась по высоте */
+  position: relative;
+  margin-top: 80px;
+}
+
+.contact-us-container {
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 700px;
+}
+
+.contact-us-title-container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 800px;
+  margin-top: 80px;
+}
+
+.contact-us-title {
+  font-family: var(--default-font);
+  font-size: 47px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.contact-us-after-title-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;  
+}
+
+.contact-us-after-title {
+  font-family: inter;
+  font-size: 16px;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.contact-us-info {
+  margin-top: 80px;
+  width: 830px;
+  display: grid;
+  grid-template-columns: 500px 380px; /* Пример: разные размеры колонок */
+}
+
+.contact-us-details {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 42px;
+  width: 430px;
+}
+
+.google-map iframe {
+  width: 500px;
+  height: 450px;
+}
+
+.contact-us-img{
+  position: absolute;
+  width: 400px;
+  right: 0;
+  top: 0;
+}
+.contact-us-image {
+  height: 700px;
+  width: 100%;
+   margin-right:-100px
+}
+
+.contact-us-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(34, 84, 144, 0.6);
+}
+
+.contact-us-details-items {
+  display: flex;
+  gap: 40px; /* расстояние между блоками */
+  flex-wrap: wrap;
+  align-items: flex-start; /* прижать к верхнему краю */
+  padding-top: 0; /* выравнивание по верхнему краю */
+}
+
+.contact-text {
+  font-family: var(--default-font);
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+.item-title {
+  font-family: var(--default-font);
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.contact-us-item {
+  height: 40px;
+  width: 150px;
+
 }
