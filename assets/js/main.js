@@ -87,46 +87,88 @@ document.addEventListener("DOMContentLoaded", function () {
 //End Project list active class function//
 //Amenities image change function//
 
-document.addEventListener("DOMContentLoaded", function() {
-    const image = document.getElementById("amenities-image");
+document.addEventListener('DOMContentLoaded', function () {
+  const image       = document.getElementById('amenities-image');
+  const linkWrapper = document.getElementById('amenities-link');
 
+  const projects = {
+    'amenities-first': {
+      src:  '/assets/img/amenties-.PNG',
+      alt:  'ремонт під ключ',
+      href: 'renovation.html'
+    },
+    'amenities-second': {
+      src:  '/assets/img/amenities-1.PNG',
+      alt:  'Проект дизайн',
+      href: 'design.html'
+    }
+    // добавь ещё 2 объекта по аналогии
+  };
+
+  // делегирование: ловим клики по ссылкам списка
+  document.querySelector('.amenities-list').addEventListener('click', function(e) {
+    const a = e.target.closest('a');
+    if (!a) return;
+
+    e.preventDefault(); // не уходим по href ссылки в списке
+
+    const data = projects[a.id];
+    if (!data) return;
+
+    // меняем картинку и ссылку-обёртку
+    image.src = data.src;
+    image.alt = data.alt;
+    linkWrapper.href = data.href;
+
+    // подсветка активной
+    document.querySelectorAll('.amenities-list a').forEach(el => el.classList.remove('active'));
+    a.classList.add('active');
+  });
+});
+//End Amenities list active class function//
+
+document.addEventListener('DOMContentLoaded', function () {
+    const image = document.getElementById('amenities-image');
     const projects = {
-        "amenities-first": {
-            src: "/assets/img/amenties-.PNG",
-            alt: "ремонт під ключ"
+        'amenities-first': {
+            src:  '/assets/img/amenties-.PNG',
+            alt:  'ремонт під ключ'
         },
-        "amenities-second": {
-            src: "/assets/img/amenities-1.PNG",
-            alt: "Проект дизайн"
+        'amenities-second': {
+            src:  '/assets/img/amenities-1.PNG',
+            alt:  'Проект дизайн'
         }
+        // добавь ещё 2 объекта по аналогии
     };
 
     document.querySelectorAll(".amenities-item a").forEach(link => {
         link.addEventListener("click", function(e) {
             e.preventDefault();
+
             const projectData = projects[this.id];
             if (projectData) {
-                image.src = projectData.src;
-                image.alt = projectData.alt;
+                image.classList.add("fade-out"); // start fade out
+
+                setTimeout(() => {
+                    image.src = projectData.src;
+                    image.alt = projectData.alt;
+                    image.classList.remove("fade-out"); // fade in
+                }, 400); // matches transition time in CSS
             }
         });
     });
 });
 
-//End Amenities image change//
-//Amenities list active class function//
+// Contact Location Link function//
+const iframe = document.getElementById('google-maps');
 
-document.addEventListener("DOMContentLoaded", function () {
-    const projectLinks = document.querySelectorAll(".amenities-list a");
+  // находим все ссылки с классом iframe-link
+  const links = document.querySelectorAll('.iframe-link');
 
-    projectLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            // Убираем класс у всех
-            projectLinks.forEach(l => l.classList.remove("active-project"));
-            // Добавляем класс к нажатой
-            this.classList.add("active-project");
-        });
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // отменяем переход по ссылке
+      const newSrc = this.getAttribute('data-src'); // берем значение data-src
+      iframe.src = newSrc; // меняем src у iframe
     });
-});
-
-//End Amenities list active class function//
+  });
