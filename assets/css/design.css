@@ -15,6 +15,8 @@
     --default-font-size: 16px;
 }
 
+
+
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-color);
     font-family: var(--default-font);
@@ -56,7 +58,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+    object-position: 50% 40%;
 }
 
 /* Renovation About Us Section */
@@ -228,7 +230,7 @@ body {
 }
 
 .renovation-amenities-title-image {
-  margin-top: 40px;
+  margin-top: 10px;
   width: 400px;
   max-width: 400px;
   height: 400px;
@@ -237,10 +239,10 @@ body {
 
 .renovation-amenities-additional-img {
   position: absolute;
-  bottom: -40px;   /* отступ от нижнего края */
+  bottom: -10px;   /* отступ от нижнего края */
   right: 420px;     /* отступ от левого края */
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   border-radius: 8px;
@@ -330,5 +332,104 @@ footer {
 
 .widgets-footer {
   display: flex;
+}
 
+/* Planning section*/
+
+.planning {
+    height: 400px;
+    margin-bottom: 80px;
+}
+
+.planning-container {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 400px;
+}
+.planning-image-1 {
+    width: 500px;
+    height: 400px;
+}
+
+.visual-img-2 {
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.visual-img-1 {
+    width: 500px;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.visual {
+height: 500px;
+margin-top: 80px;
+}
+
+.planning-image-2 {
+    width: 300px;
+    height: 300px;
+    margin-top: 60px;
+}
+
+.planning-text-container {
+    margin-left: 24px;
+    width: 400px;
+}
+
+.planning-title-container {
+    text-align: center;
+}
+
+.planning-text-container h2 {
+    font-family: var(--default-font);
+    font-size: 48px;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.planning-text {
+    font-family: var(--default-font);
+    font-size: 14px;
+}
+
+.planning-text-list {
+    font-family: var(--default-font);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.planning-list li {
+font-family: var(--default-font);
+font-size: 14px;
+}
+
+.planning-list {
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+.planning-butt {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    height: 45px;
+    border-radius: 7px;
+    border-color: var(--blure-color);
+    
+}
+
+.planning-butt:hover {
+    background-color: var(--blure-color);
+    transition: ease-in-out 0.3s;
+}
+
+.planning-butt:active {
+    background-color: #c4c4c4;
 }

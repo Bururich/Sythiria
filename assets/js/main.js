@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function() {
             alt: "Проект Сузір'я Скай"
         },
         "project-third": {
-            src: "/assets/img/projects-sythiria2020.jpg",
+            src: "/assets/img/projects-sythiria2020.JPG",
             alt: "Проект Сузір'я 2020"
         },
         "project-fourth": {
-            src: "/assets/img/projects-sythiria2019.jpg",
+            src: "/assets/img/project-sythiria2019New.jpg",
             alt: "Проект Сузір'я 2019"
         }
     };
@@ -63,6 +63,23 @@ document.addEventListener("DOMContentLoaded", function() {
             if (projectData) {
                 image.src = projectData.src;
                 image.alt = projectData.alt;
+            }
+        });
+    });
+
+    document.querySelectorAll(".project-item a").forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            const projectData = projects[this.id];
+            if (projectData) {
+                image.classList.add("fade-out"); // start fade out
+
+                setTimeout(() => {
+                    image.src = projectData.src;
+                    image.alt = projectData.alt;
+                    image.classList.remove("fade-out"); // fade in
+                }, 400); // matches transition time in CSS
             }
         });
     });
@@ -83,6 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
 
 //End Project list active class function//
 //Amenities image change function//
@@ -172,3 +191,5 @@ const iframe = document.getElementById('google-maps');
       iframe.src = newSrc; // меняем src у iframe
     });
   });
+
+  
