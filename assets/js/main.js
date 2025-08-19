@@ -192,4 +192,39 @@ const iframe = document.getElementById('google-maps');
     });
   });
 
-  
+  // Сопоставление ID ссылок с нужными href
+  const projectLinks = {
+    "project-first": {
+      href: "europe.html",
+      img: "/assets/img/projects-europe.PNG",
+      alt: "Проект Сузір'я Європейське"
+    },
+    "project-second": {
+      href: "sky.html",
+      img: "/assets/img/projects-sky.PNG",
+      alt: "Проект Сузір'я Скай"
+    },
+    "project-third": {
+      href: "2020.html",
+      img: "/assets/img/projects-2020.PNG",
+      alt: "Проект Сузір'я 2020"
+    },
+    "project-fourth": {
+      href: "2019.html",
+      img: "/assets/img/projects-2019.PNG",
+      alt: "Проект Сузір'я 2019"
+    }
+  };
+
+  // Назначаем обработчики клика
+  Object.keys(projectLinks).forEach(id => {
+    document.getElementById(id).addEventListener("click", function () {
+      const data = projectLinks[id];
+      const link = document.getElementById("projects-link");
+      const image = document.getElementById("project-image");
+
+      link.href = data.href;
+      image.src = data.img;
+      image.alt = data.alt;
+    });
+  });
