@@ -1,0 +1,12 @@
+.project-2019-bg {
+    width: 100%;
+    height: 730px;
+    display: flex;
+    align-items: flex-end;
+    
+    background-image: url(/assets/img/projects-sythiria2019.JPG);
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    background-position: center top;
+}

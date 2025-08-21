@@ -47,6 +47,12 @@ header {
     display: flex
  }
 
+ .header-europe-container h1 {
+    font-family: var(--default-font);
+    font-size: 47px;
+    font-weight: 400;
+ }
+
  /* Hero Styles*/
 
  .europe-hero {
@@ -61,11 +67,6 @@ header {
     background-repeat: no-repeat; /* Prevents repeating */
  }
 
- .europe-hero-image {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
- }
 
  .europe-hero-butt {
     width: 380px;
@@ -387,7 +388,8 @@ header {
 .description {
     display: flex;
     height: 400px;
-    margin-top: 60px;
+    margin-top: 90px;
+    margin-bottom: 80px;
     justify-content: center;
     align-items: center;
 }
@@ -463,5 +465,14 @@ footer {
 
 .widgets-footer {
   display: flex;
+}
 
+.footer-text a {
+  text-decoration: none;
+  color: inherit;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+.footer-text a:hover {
+color: var(--accent-color);
 }

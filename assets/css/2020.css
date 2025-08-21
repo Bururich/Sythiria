@@ -1,0 +1,29 @@
+.small-photo {
+    height: 400px;
+}
+
+.project-2020-bg {
+    width: 100%;
+    height: 730px;
+    display: flex;
+    align-items: flex-end;
+    
+    background-image: url(/assets/img/projects-sythiria2020.JPG);
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    background-position: center 40%;
+}
+
+.hero-2020-text {
+    font-family: var(--default-font);
+    font-size: 40px;
+    background-color: #36517E;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin: 0;
+    align-items: center;
+    color: white;
+    line-height: 80px;
+}
