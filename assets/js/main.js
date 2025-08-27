@@ -228,3 +228,49 @@ const iframe = document.getElementById('google-maps');
       image.alt = data.alt;
     });
   });
+
+
+  const modal = document.getElementById('modal');
+const thankModal = document.getElementById('thankModal');
+
+const openModal = document.getElementById('openModal');
+const closeModal = document.getElementById('closeModal');
+const closeThank = document.getElementById('closeThank');
+
+const contactForm = document.getElementById('contactForm');
+
+// Открыть форму
+openModal.addEventListener('click', () => {
+  modal.style.display = 'flex';
+});
+
+// Закрыть форму
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Закрыть окно благодарности
+closeThank.addEventListener('click', () => {
+  thankModal.style.display = 'none';
+});
+
+// Закрытие по клику вне модалки
+window.addEventListener('click', (e) => {
+  if (e.target === modal) modal.style.display = 'none';
+  if (e.target === thankModal) thankModal.style.display = 'none';
+});
+
+// При отправке формы
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  modal.style.display = 'none';
+  thankModal.style.display = 'flex';
+  contactForm.reset();
+
+  setTimeout(() => {
+    thankModal.style.display = 'none';
+  }, 3000);
+});
+
+
