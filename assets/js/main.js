@@ -39,19 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const projects = {
         "project-first": {
-            src: "/assets/img/projects-europe.PNG",
+            src: "./assets/img/projects-europe.PNG",
             alt: "Проект Сузір'я Європейське"
         },
         "project-second": {
-            src: "/assets/img/project-sky.jpg",
+            src: "./assets/img/project-sky.jpg",
             alt: "Проект Сузір'я Скай"
         },
         "project-third": {
-            src: "/assets/img/projects-sythiria2020.JPG",
+            src: "./assets/img/projects-sythiria2020.JPG",
             alt: "Проект Сузір'я 2020"
         },
         "project-fourth": {
-            src: "/assets/img/project-sythiria2019New.jpg",
+            src: "./assets/img/project-sythiria2019New.jpg",
             alt: "Проект Сузір'я 2019"
         }
     };
@@ -112,12 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const projects = {
     'amenities-first': {
-      src:  '/assets/img/amenties-.PNG',
+      src:  './assets/img/amenties-.PNG',
       alt:  'ремонт під ключ',
       href: 'renovation.html'
     },
     'amenities-second': {
-      src:  '/assets/img/amenities-1.PNG',
+      src:  './assets/img/amenities-1.PNG',
       alt:  'Проект дизайн',
       href: 'design.html'
     }
@@ -150,11 +150,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const image = document.getElementById('amenities-image');
     const projects = {
         'amenities-first': {
-            src:  '/assets/img/amenties-.PNG',
+            src:  './assets/img/amenties-.PNG',
             alt:  'ремонт під ключ'
         },
         'amenities-second': {
-            src:  '/assets/img/amenities-1.PNG',
+            src:  './assets/img/amenities-1.PNG',
             alt:  'Проект дизайн'
         }
         // добавь ещё 2 объекта по аналогии
@@ -196,22 +196,22 @@ const iframe = document.getElementById('google-maps');
   const projectLinks = {
     "project-first": {
       href: "europe.html",
-      img: "/assets/img/projects-europe.PNG",
+      img: "./assets/img/projects-europe.PNG",
       alt: "Проект Сузір'я Європейське"
     },
     "project-second": {
       href: "sky.html",
-      img: "/assets/img/projects-sky.PNG",
+      img: "./assets/img/projects-sky.PNG",
       alt: "Проект Сузір'я Скай"
     },
     "project-third": {
       href: "2020.html",
-      img: "/assets/img/projects-2020.PNG",
+      img: "./assets/img/projects-2020.PNG",
       alt: "Проект Сузір'я 2020"
     },
     "project-fourth": {
       href: "2019.html",
-      img: "/assets/img/projects-2019.PNG",
+      img: "./assets/img/projects-2019.PNG",
       alt: "Проект Сузір'я 2019"
     }
   };

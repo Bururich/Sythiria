@@ -146,6 +146,79 @@ html {
   border-color: var(--background-color);
 }
 
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .nav-item {
+    padding: 14px 10px;
+    font-size: 15px;
+  }
+
+  .tel-button {
+    width: 150px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 0 20px;
+    align-items: center;
+  }
+
+  .logo,
+  .right-header,
+  nav {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tel-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .tel-number {
+    font-size: 14px;
+  }
+
+  .tel-button {
+    font-size: 14px;
+    height: 38px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+
 /* Hero Section Styles*/
 
 .hero {
