@@ -17,32 +17,46 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/img/footer-logo.png" alt="Sythiria Logo"/>
-                </a>
-            </div>
-        
-        <nav>           
-                <ul class="nav-links">
-                    <li><a href="#aboutUS" class="nav-item">Про Сузір'я</a></li>
-                    <li><a href="#our-projects" class="nav-item">Проекти</a></li>
-                    <li><a href="#our-amenities" class="nav-item">Послуги</a></li>
-                </ul>
-        </nav>
+  <div class="container">
+    <div class="header-left">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/footer-logo.png" alt="Sythiria Logo" />
+        </a>
+      </div>
 
-                <div class="right-header">
-                    <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
-                    <button id="openModal" class="tel-button">Замовити дзвінок</button>
-                </div>    
+      <!-- Мобильные иконки -->
+      <div class="mobile-icons">
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
         </div>
-    </header>
+        <div class="phone-icon" id="phoneIcon">
+          📞
+        </div>
+      </div>
+    </div>
+
+    <!-- Десктопное меню -->
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="#aboutUS" class="nav-item">Про Сузір'я</a></li>
+        <li><a href="#our-projects" class="nav-item">Проекти</a></li>
+        <li><a href="#our-amenities" class="nav-item">Послуги</a></li>
+      </ul>
+    </nav>
+
+    <div class="right-header">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id="openModal" class="tel-button">Замовити дзвінок</button>
+    </div>
+  </div>
+</header>
+
     <main>
         <!--                                   Hero section                       -->
         <section class="hero">
                  <div class="hero-bg">
-                   <video src="./assets/img/hero-testVideo.mp4" class="hero-video" id="myVideo"></video>
+                   <video src="./assets/img/hero-video.MP4" class="hero-video" id="myVideo"></video>
                  </div>
                  <div class="hero-content">
                    <a class="pulsating-play-btn" id="playBtn" href="#">
@@ -298,6 +312,28 @@
     <img src="./assets/img/model-icon.png" alt="Success" width="80">
     <h2>ДЯКУЄМО ЗА ВАШЕ ЗВЕРНЕННЯ!</h2>
     <p>НАШІ МЕНЕДЖЕРИ ЗВ’ЯЖУТЬСЯ З ВАМИ В НАЙБЛИЖЧИЙ ЧАС</p>
+  </div>
+</div>
+
+<div class="modal" id="navModal">
+  <div class="modal-content">
+    <span class="close" id="closeNavModal">&times;</span>
+    <ul class="modal-links">
+      <li><a href="#aboutUS" class="nav-item mobile-item">Про Сузір'я</a></li>
+      <li><a href="#our-projects" class="nav-item mobile-item">Проекти</a></li>
+      <li><a href="#our-amenities" class="nav-item mobile-item">Послуги</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Модалка для телефона -->
+<div class="modal" id="phoneModal">
+  <div class="modal-content">
+    <span class="close" id="closePhoneModal">&times;</span>
+    <div class="modal-contact">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id='openModal' class="tel-button">Замовити дзвінок</button>
+    </div>
   </div>
 </div>
     </main>

@@ -35,37 +35,47 @@ document.addEventListener('DOMContentLoaded', () => {
 //Project image change function//
 
 document.addEventListener("DOMContentLoaded", function() {
-    const image = document.getElementById("project-image");
+  const image = document.getElementById("project-image");
 
-    const projects = {
-        "project-first": {
-            src: "./assets/img/projects-europe.PNG",
-            alt: "Проект Сузір'я Європейське"
-        },
-        "project-second": {
-            src: "./assets/img/project-sky.jpg",
-            alt: "Проект Сузір'я Скай"
-        },
-        "project-third": {
-            src: "./assets/img/projects-sythiria2020.JPG",
-            alt: "Проект Сузір'я 2020"
-        },
-        "project-fourth": {
-            src: "./assets/img/project-sythiria2019New.jpg",
-            alt: "Проект Сузір'я 2019"
+  const projects = {
+    "project-first": {
+      src: "./assets/img/projects-europe.PNG",
+      alt: "Проект Сузір'я Європейське"
+    },
+    "project-second": {
+      src: "./assets/img/project-sky.jpg",
+      alt: "Проект Сузір'я Скай"
+    },
+    "project-third": {
+      src: "./assets/img/projects-sythiria2020.JPG",
+      alt: "Проект Сузір'я 2020",
+      class: "full"
+    },
+    "project-fourth": {
+      src: "./assets/img/project-sythiria2019New.jpg",
+      alt: "Проект Сузір'я 2019"
+    }
+  };
+
+  document.querySelectorAll(".project-item a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const projectData = projects[this.id];
+      if (projectData) {
+        image.src = projectData.src;
+        image.alt = projectData.alt;
+
+        // Удаляем класс 'full' перед установкой нового
+        image.classList.remove("full");
+
+        // Если в объекте указан класс — добавляем его
+        if (projectData.class) {
+          image.classList.add(projectData.class);
         }
-    };
-
-    document.querySelectorAll(".project-item a").forEach(link => {
-        link.addEventListener("click", function(e) {
-            e.preventDefault();
-            const projectData = projects[this.id];
-            if (projectData) {
-                image.src = projectData.src;
-                image.alt = projectData.alt;
-            }
-        });
+      }
     });
+  });
+
 
     document.querySelectorAll(".project-item a").forEach(link => {
         link.addEventListener("click", function(e) {
@@ -201,17 +211,17 @@ const iframe = document.getElementById('google-maps');
     },
     "project-second": {
       href: "sky.html",
-      img: "./assets/img/projects-sky.PNG",
+      img: "./assets/img/project-sky.jpg",
       alt: "Проект Сузір'я Скай"
     },
     "project-third": {
       href: "2020.html",
-      img: "./assets/img/projects-2020.PNG",
+      img: "./assets/img/projects-sythiria2020.jpg",
       alt: "Проект Сузір'я 2020"
     },
     "project-fourth": {
       href: "2019.html",
-      img: "./assets/img/projects-2019.PNG",
+      img: "./assets/img/projects-sythiria2019.jpg",
       alt: "Проект Сузір'я 2019"
     }
   };
@@ -238,9 +248,14 @@ const closeModal = document.getElementById('closeModal');
 const closeThank = document.getElementById('closeThank');
 
 const contactForm = document.getElementById('contactForm');
-
+function closeAllModals() {
+  document.querySelectorAll('.modal.active').forEach(modal => {
+    modal.classList.remove('active');
+  });
+}
 // Открыть форму
 openModal.addEventListener('click', () => {
+  closeAllModals();
   modal.style.display = 'flex';
 });
 
@@ -272,5 +287,63 @@ contactForm.addEventListener('submit', (e) => {
     thankModal.style.display = 'none';
   }, 3000);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const mobileNav = document.getElementById("mobileNav");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    mobileNav.classList.toggle("active");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const phoneIcon = document.getElementById("phoneIcon");
+  const navModal = document.getElementById("navModal");
+  const phoneModal = document.getElementById("phoneModal");
+
+  const closeNavModal = document.getElementById("closeNavModal");
+  const closePhoneModal = document.getElementById("closePhoneModal");
+
+  // Проверка: активна ли модалка
+  const isModalOpen = () => {
+    return navModal.classList.contains("active") || phoneModal.classList.contains("active");
+  };
+
+  // Открытие модалки с навигацией
+  burger.addEventListener("click", () => {
+    if (!isModalOpen()) {
+      navModal.classList.add("active");
+    }
+  });
+
+  // Открытие модалки с телефоном
+  phoneIcon.addEventListener("click", () => {
+    if (!isModalOpen()) {
+      phoneModal.classList.add("active");
+    }
+  });
+
+  // Закрытие по кнопке
+  closeNavModal.addEventListener("click", () => {
+    navModal.classList.remove("active");
+  });
+
+  closePhoneModal.addEventListener("click", () => {
+    phoneModal.classList.remove("active");
+  });
+
+  // Закрытие по клику на фон
+  [navModal, phoneModal].forEach(modal => {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+      }
+    });
+  });
+});
+
 
 

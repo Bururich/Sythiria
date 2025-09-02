@@ -32,13 +32,12 @@ body {
 header{
     width: 100%;
     height: 4rem;
-    background-color:var(--background-color);
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
     display: flex;
-    
+    background: linear-gradient(rgba(34,84,144,0.2), rgba(34,84,144,0.2)), url(../img/footer-bg.jpg);
 }
 nav {
     padding: 0;
@@ -58,7 +57,7 @@ html {
     margin-right: 100px;
     width: 100%;
     position: relative;
-
+    
 }
 
 .nav-links {
@@ -78,7 +77,7 @@ html {
 }
 
 .nav-item {
-    color: var(--text-color);
+    color: var(--background-color);
     font-family: var(--default-font);
     padding: 18px 15px;
     font-size: 16px;
@@ -100,6 +99,8 @@ html {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    width: 65px;
+    height: 35px;
 }
 
 .logo img {
@@ -117,7 +118,7 @@ html {
 }
 
 .tel-number {
-    color: var(--text-color);
+    color: var(--background-color);
     font-size: var(--default-font-size);
     font-family: var(--default-font);
     text-decoration: none;
@@ -154,7 +155,8 @@ html {
 
   .nav-item {
     padding: 14px 10px;
-    font-size: 15px;
+    font-size: 16px;
+    
   }
 
   .tel-button {
@@ -163,49 +165,18 @@ html {
   }
 }
 
-@media (max-width: 768px) {
-  header {
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  .container {
-    flex-direction: column;
-    margin: 0 20px;
-    align-items: center;
-  }
-
-  .logo,
-  .right-header,
-  nav {
-    position: static;
-    transform: none;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .tel-button {
-    width: 100%;
-    max-width: 250px;
-  }
-}
-
 @media (max-width: 480px) {
   .nav-item {
     font-size: 14px;
     padding: 10px;
+    justify-content: center;
   }
 
   .tel-number {
-    font-size: 14px;
+    font-size: 30px;
   }
+
+  
 
   .tel-button {
     font-size: 14px;
@@ -215,6 +186,211 @@ html {
   .logo img {
     width: 50px;
     height: auto;
+    
+  }
+}
+
+/* Мобильные иконки рядом с логотипом */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mobile-icons {
+  display: none;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Бургер */
+.burger {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 3px;
+  background-color: var(--background-color);
+  border-radius: 2px;
+}
+
+/* Иконка телефона */
+.phone-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Модалки */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#navModal .modal-content,
+#phoneModal .modal-content {
+  width: 100%;
+  background-color:rgba(0,0,0,0.1);
+  
+}
+
+#navModal .modal-content .mobile-item {
+  color: var(--background-color);
+  font-size: 25px;
+}
+
+#phoneModal .modal-content a {
+  color: var(--background-color);
+}
+
+#phoneModal .modal-content a:hover {
+  color: var(--hover-color);
+}
+
+
+
+#navModal .modal-content .mobile-item:hover {
+  color: var(--hover-color);
+}
+
+.close {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.modal-links {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-links li {
+  margin: 10px 0;
+}
+
+.modal-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.modal-contact a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .desktop-nav,
+  .right-header {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+  }
+
+  .mobile-icons {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+  
+  }
+
+  .container {
+   position: relative;
+    height: 50px;
+    margin: 0;
+    
+  }
+
+  .logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 20px;
+    
+  }
+
+  .logo img {
+  display: block;
+  height: 40px; /* или auto, если адаптивный */
+  object-fit: contain;
+  }
+    header {
+    height: auto;
+    align-items: center;
+    padding: 5px 0;
+    
+  }
+
+  .container {
+    align-items: center;
+  }
+
+  .logo,
+  .right-header,
+  nav {
+    position: static;
+    transform: none;
+    
+    text-align: center;
+    align-items: center;
+  }
+
+  .tel-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tel-number {
+    width: 100%;
+    height: 30px;
+    background-color: var(--background-color);
+    text-align: center;
+    justify-items: center;
+    color: var(--hover-color)!important ; 
+    padding-top: 8px;
+    border-radius: 8px;
+  }
+  .tel-number:hover {
+   background-color: var(--hover-color)!important ;
+   color: var(--blure-color) !important;
   }
 }
 
@@ -336,143 +512,136 @@ html {
 
 /* About-Us Section Styles*/
 
+/* Контейнер секции */
 .about-container {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 80px;
-}
-
-.about-us {
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-}
-
-.section-title {
-    display: block;
-    font-size: 30px;
-    font-family: var(--default-font);
+  max-width: 1440px;
+  margin: 80px auto 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
 }
 
 .about-us-description {
-    width: 100%;
-    height: 350px;
-    padding-top: 60px;
-    display: flex;
-    align-items: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  align-items: stretch;
 }
 
-.first-description,
-.second-description {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-}
-
+/* Левая колонка */
 .first-description {
-    /* width: 400px; */ /* Remove this for equal columns, or keep for fixed width */
-    max-width: 400px;
-    align-self: stretch; 
-    border-right: 2px solid #36517E;
-    padding-right: 40px;
-    margin-right: 40px; 
-    align-items: flex-start;
+  flex: 0 0 440px;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #36517E;
+  padding-right: 40px;
 }
 
-.second-description{
-    max-width: 400px ;
-    align-items: center;
-    padding-right: 40px;
-    margin-right: 40px;
-    border-right: 2px solid #36517E;
-    
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
-.description-text  {
-    font-family: var(--default-font);
-    padding-bottom: 33px;
-    margin: 0;
-}
-
 
 .description-title {
-    font-weight: 700;
-    padding-bottom: 25px;
-    margin-top: 0 !important;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.description-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Средняя колонка */
+.second-description {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #36517E;
+  padding-right: 40px;
 }
 
 .second-title {
-    font-weight: 700;
-    padding-bottom: 24px;
-    line-height: 19px;
-    margin: 0 ;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
 .description-item {
-    width: 200px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;     
-    justify-content: center; 
-    text-align: center;
-    margin-bottom: 8px;
-    
-}
-
-.first-item {
-    margin-top: 24px;
-}
-
-.item-text {
-    font-size: 14px;
-    color: var(--text-color);
-    line-height: auto;
-    font-family: var(--default-font);
+  width: 200px;
+  height: 80px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .item-icon {
-    width: 36px;
-    height: 36px;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
 }
 
+.item-text {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Правая колонка */
 .stats {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-left: 20px;
+  align-self: center;
+  justify-items: center;
 }
 
 .stat-item {
   position: relative;
-  padding: 30px;
+  width: 180px;
+  height: 120px;
+  padding: 5px 10px;
   text-align: center;
-  font-family: sans-serif;
-}
-
-
-.stat-number {
-  display: block;
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--reserved-color); 
+  font-family: var(--default-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
 }
 
-/* Текст */
+/* Внутренний <span> обёртки */
+.stat-item > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Цифра */
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+/* Подпись */
 .stat-text {
-  margin-top: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #000;
+  line-height: 1.4;
+  text-align: center;
 }
 
-
-.block {
-  position: relative;
-  padding: 20px;
-}
-
+/* Угловые рамки */
 .block::before,
 .block::after {
   content: "";
@@ -483,34 +652,179 @@ html {
   border-style: solid;
 }
 
-
 .block.top-left::before {
   top: 0;
   left: 0;
   border-width: 2px 0 0 2px;
 }
 
-
-.block.top-right::before {
-  top: 0;
-  right: 0;
-  border-width: 2px 2px 0 0;
-  
-}
-
-
-.block.bottom-left::after {
-  bottom: 0;
-  left: 0;
-  border-width: 0 0 2px 2px;
-}
-
-
 .block.bottom-right::after {
   bottom: 0;
   right: 0;
   border-width: 0 2px 2px 0;
 }
+
+@media (max-width: 1280px) {
+  .about-us-description {
+    gap: 24px;
+  }
+
+  .first-description,
+  .second-description,
+  .stats {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+
+  .description-text,
+  .item-text,
+  .stat-text {
+    font-size: 0.95rem;
+  }
+
+  .stat-item {
+    width: 160px;
+    height: 120px;
+    padding: 16px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .description-item {
+    max-width: 200px;
+  }
+
+  .item-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+   .about-container {
+    padding: 0 30px;
+    margin-top: 60px;
+  }
+
+  .about-us-description {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .first-description,
+  .second-description,
+  .stats {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .first-description {
+    align-items: flex-start;
+  }
+
+  .second-description {
+    align-items: center;
+  }
+
+  .description-title,
+  .second-title {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .description-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .item-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .item-text {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    justify-items: center;
+  }
+
+  .stat-item {
+    width: 200px;
+    height: 140px;
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .stat-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .block::before,
+  .block::after {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 24px 16px;
+    margin: 0 auto;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .stat-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .block::before,
+  .block::after {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Адаптивность */
+
+
+
 
 /* Global Stats Secdtion */
 
@@ -549,6 +863,17 @@ html {
   object-position: 50% 30%;
   transition: opacity 0.4s ease-in-out;
   opacity: 1;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.full {
+  width: 1000px;
+  height: 600px;
+  object-fit: cover;
 }
 
 .project-list {
