@@ -343,6 +343,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  const navLinks = document.querySelectorAll("#navModal .modal-links a[href^='#']");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navModal.classList.remove("active");
+      burger.classList.remove("active"); // если бургер тоже активен
+    });
+  });
 });
 
 
