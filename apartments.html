@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Css connection -->
+    <link href="assets/css/apartments.css" rel="stylesheet">
+    
+    <!-- Fonts connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Sythiria</title>
+</head>
+<body>
+    <header>
+         <div class="container">
+    <div class="header-left">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/footer-logo.png" alt="Sythiria Logo" />
+        </a>
+      </div>
+
+      <!-- Мобильные иконки -->
+      <div class="mobile-icons">
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="phone-icon" id="phoneIcon">
+          📞
+        </div>
+      </div>
+    </div>
+
+    <!-- Десктопное меню -->
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="#aboutUS" class="nav-item">Про Сузір'я</a></li>
+        <li><a href="#our-projects" class="nav-item">Проекти</a></li>
+        <li><a href="#our-amenities" class="nav-item">Послуги</a></li>
+      </ul>
+    </nav>
+
+    <div class="right-header">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id="openModal" data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
+    </header>
+    <main>
+        <section class="catalog">
+    <h2 class="catalog-title">ЗНАЙДЕНО 12 З 12 КВАРТИР</h2>
+    <div class="catalog-grid">
+
+      <!-- Карточка квартиры -->
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№1</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-1.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartment-interior-1.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 20.8 м²</p>
+          <p>Поверх: 2</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№1"
+            data-status="вільна"
+            data-area="20.8 м²"
+            data-floor="2"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-1.PNG"
+            data-interior="./assets/img/apartment-interior-1.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№2</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-2.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-2.JPG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 25.3 м²</p>
+          <p>Поверх: 2</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№2"
+            data-status="вільна"
+            data-area="25.3 м²"
+            data-floor="2"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-2.PNG"
+            data-interior="./assets/img/apartments-interior-2.JPG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№3</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-3.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-3.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 22.5 м²</p>
+          <p>Поверх: 2</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№3"
+            data-status="вільна"
+            data-area="22.5 м²"
+            data-floor="2"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-3.PNG"
+            data-interior="./assets/img/apartments-interior-3.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№4</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-4.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-4.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 34 м²</p>
+          <p>Поверх: 2</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№4"
+            data-status="вільна"
+            data-area="34 м²"
+            data-floor="2"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-4.PNG"
+            data-interior="./assets/img/apartments-interior-4.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№5</span>
+          <span class="status sold">продано</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-5.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-5.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 22.6 м²</p>
+          <p>Поверх: 2</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№5"
+            data-status="продано"
+            data-area="22.6 м²"
+            data-floor="2"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-5.PNG"
+            data-interior="./assets/img/apartments-interior-5.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№6</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-6.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-6.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 35.4 м²</p>
+          <p>Поверх: 2</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№6"
+            data-status="вільна"
+            data-area="35.4 м²"
+            data-floor="2"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-6.PNG"
+            data-interior="./assets/img/apartments-interior-6.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№7</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-6.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-6.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 20.8 м²</p>
+          <p>Поверх: 3</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№7"
+            data-status="вільна"
+            data-area="20.8 м²"
+            data-floor="3"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-5.PNG"
+            data-interior="./assets/img/apartments-interior-5.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№8</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-5.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-5.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 25.3 м²</p>
+          <p>Поверх: 3</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№8"
+            data-status="вільна"
+            data-area="25.4 м²"
+            data-floor="3"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-4.PNG"
+            data-interior="./assets/img/apartments-interior-4.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№9</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-4.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-4.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 22.5 м²</p>
+          <p>Поверх: 3</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№9"
+            data-status="вільна"
+            data-area="22.5 м²"
+            data-floor="3"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-3.PNG"
+            data-interior="./assets/img/apartments-interior-3.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№10</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-3.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-3.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 34 м²</p>
+          <p>Поверх: 3</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№10"
+            data-status="вільна"
+            data-area="34 м²"
+            data-floor="3"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-2.PNG"
+            data-interior="./assets/img/apartments-interior-2.JPG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№11</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-2.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-2.JPG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 22.6 м²</p>
+          <p>Поверх: 3</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№11"
+            data-status="вільна"
+            data-area="22.6 м²"
+            data-floor="3"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-1.PNG"
+            data-interior="./assets/img/apartment-interior-1.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
+          <span class="apartment-number">№12</span>
+          <span class="status sold">продано</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/apartments-planning-1.PNG" alt="План" class="plan-img" />
+          <img src="./assets/img/apartments-interior-1.PNG" alt="Інтер'єр" class="interior-img" />
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 35.4 м²</p>
+          <p>Поверх: 3</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№12"
+            data-status="продано"
+            data-area="35.4 м²"
+            data-floor="3"
+            data-complex="Європейське"
+            data-plan="./assets/img/apartments-planning-4.PNG"
+            data-interior="./assets/img/apartments-interior-4.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <!-- Повтори блоки с разными данными -->
+      <!-- ... -->
+
+    </div>
+  </section>
+
+  <!-- Модалка квартиры -->
+
+  <div id="apartmentModalWindow" class="apartment-modal">
+  <div class="apartment-modal-content">
+    <span class="apartment-modal-close" onclick="closeApartmentModal()">×</span>
+    <h3 id="modalTitle"></h3>
+
+    <div class="apartment-modal-images">
+      <img id="modalPlan" src="" alt="План" />
+      <img id="modalInterior" src="" alt="Інтер'єр" />
+    </div>
+
+    <div class="apartment-modal-info">
+      <p><strong>ЖК:</strong> <span id="modalComplex"></span></p>
+      <p><strong>Статус:</strong> <span id="modalStatus"></span></p>
+      <p><strong>Поверх:</strong> <span id="modalFloor"></span></p>
+      <p><strong>Площа:</strong> <span id="modalArea"></span></p>
+    </div>
+
+    <button class="apartment-select-btn">Обрати Квартиру</button>
+  </div>
+</div>
+
+
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>ЗВ’ЯЗАТИСЯ З МЕНЕДЖЕРОМ</h2>
+    <form id="contactForm">
+      <label>Ім’я</label>
+      <input type="text" placeholder="Дарина" required>
+      <label>Телефон</label>
+      <input type="tel" placeholder="+380" required>
+      <button type="submit" class="submit-btn">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<!-- Модалка благодарности -->
+<div id="thankModal" class="modal">
+  <div class="modal-content thanks-content">
+    <span class="close" id="closeThank">&times;</span>
+    <img src="./assets/img/model-icon.png" alt="Success" width="80">
+    <h2>ДЯКУЄМО ЗА ВАШЕ ЗВЕРНЕННЯ!</h2>
+    <p>НАШІ МЕНЕДЖЕРИ ЗВ’ЯЖУТЬСЯ З ВАМИ В НАЙБЛИЖЧИЙ ЧАС</p>
+  </div>
+</div>
+
+<div class="modal" id="navModal">
+  <div class="modal-content">
+    <span class="close" id="closeNavModal">&times;</span>
+    <ul class="modal-links">
+      <li><a href="#aboutUS" class="nav-item mobile-item">Про Сузір'я</a></li>
+      <li><a href="#our-projects" class="nav-item mobile-item">Проекти</a></li>
+      <li><a href="#our-amenities" class="nav-item mobile-item">Послуги</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Модалка для телефона -->
+<div class="modal" id="phoneModal">
+  <div class="modal-content">
+    <span class="close" id="closePhoneModal">&times;</span>
+    <div class="modal-contact">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id='openModal' data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
+</div>
+    </main>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/apartmaents.js"></script>
+</body>

@@ -17,13 +17,48 @@
     <title>Sythiria</title>
 </head>
 <body>
-    <header class="renovation-header renovation-container">
-        <div class="header-renovation-container">
-           <H1>РЕМОНТ ПІД КЛЮЧ</H1>
+    <header>
+        <div class="container">
+    <div class="header-left">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/footer-logo.png" alt="Sythiria Logo" />
+        </a>
+      </div>
+
+      <!-- Мобильные иконки -->
+      <div class="mobile-icons">
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
         </div>
+        <div class="phone-icon" id="phoneIcon">
+          📞
+        </div>
+      </div>
+    </div>
+
+    <!-- Десктопное меню -->
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="#aboutUS" class="nav-item">Про Сузір'я</a></li>
+        <li><a href="#our-projects" class="nav-item">Проекти</a></li>
+        <li><a href="#our-amenities" class="nav-item">Послуги</a></li>
+      </ul>
+    </nav>
+
+    <div class="right-header">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id="openModal" data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
     </header>
 
     <main>
+      <section class="renovation-header renovation-container">
+        <div class="header-renovation-container">
+           <H1>РЕМОНТ ПІД КЛЮЧ</H1>
+        </div>
+      </section>
 
         <section class="renovation-hero">
             <img src="./assets/img/amenties-.PNG" alt="Ремонт під ключ" class="renovation-hero-image">
@@ -31,7 +66,7 @@
         
         <section class="renovation-content renovation-container-about-us">
             <p>Наша команда професіоналів надає повний спектр ремонтно-будівельних послуг. Ми супроводжуємо кожен етап — від чорнових робіт до фінішного оздоблення, з урахуванням ваших побажань та сучасних стандартів.</p>
-            <button class="renovation-button">Замовити дзвінок</button>
+            <button data-target="modal" class="renovation-button open-modal-btn">Замовити дзвінок</button>
         </section>
 
         <section class="renovation-amenities renovation-container">
@@ -91,14 +126,60 @@
         <h2 class="renovation-amenities-title">ПОСЛУГИ</h2>
         <p class="renovation-amenities-subtitle">Виконуємо всі види будівельних робіт</p>
       <div class="image-wrapper">
-        <img src="./assets/img/renovation-2.jpg" alt="title-img" class="renovation-amenities-title-image">
         <img src="./assets/img/renovation.jpg" alt="additional img" class="renovation-amenities-additional-img">
+        <img src="./assets/img/renovation-2.jpg" alt="title-img" class="renovation-amenities-title-image"> 
     </div>
       </div>
     </div>
     
   </div>
 </section>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>ЗВ’ЯЗАТИСЯ З МЕНЕДЖЕРОМ</h2>
+    <form id="contactForm">
+      <label>Ім’я</label>
+      <input type="text" placeholder="Дарина" required>
+      <label>Телефон</label>
+      <input type="tel" placeholder="+380" required>
+      <button type="submit" class="submit-btn">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<!-- Модалка благодарности -->
+<div id="thankModal" class="modal">
+  <div class="modal-content thanks-content">
+    <span class="close" id="closeThank">&times;</span>
+    <img src="./assets/img/model-icon.png" alt="Success" width="80">
+    <h2>ДЯКУЄМО ЗА ВАШЕ ЗВЕРНЕННЯ!</h2>
+    <p>НАШІ МЕНЕДЖЕРИ ЗВ’ЯЖУТЬСЯ З ВАМИ В НАЙБЛИЖЧИЙ ЧАС</p>
+  </div>
+</div>
+
+<div class="modal" id="navModal">
+  <div class="modal-content">
+    <span class="close" id="closeNavModal">&times;</span>
+    <ul class="modal-links">
+      <li><a href="#aboutUS" class="nav-item mobile-item">Про Сузір'я</a></li>
+      <li><a href="#our-projects" class="nav-item mobile-item">Проекти</a></li>
+      <li><a href="#our-amenities" class="nav-item mobile-item">Послуги</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Модалка для телефона -->
+<div class="modal" id="phoneModal">
+  <div class="modal-content">
+    <span class="close" id="closePhoneModal">&times;</span>
+    <div class="modal-contact">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id='openModal' data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
+</div>
     </main>
     <footer>
         <div class="footer-container">
@@ -133,4 +214,8 @@
             </ul>
         </div>
     </footer>
+
+
+    <!-- JS connection-->
+    <script src="assets/js/nav.js"></script>
 </body>

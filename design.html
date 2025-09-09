@@ -16,21 +16,55 @@
     <title>Sythiria</title>
 </head>
 <body>
-    <header class="renovation-header renovation-container">
-        <div class="header-renovation-container">
-           <H1>ДИЗАЙН ПРОЕКТ</H1>
+       <header>
+  <div class="container">
+    <div class="header-left">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/footer-logo.png" alt="Sythiria Logo" />
+        </a>
+      </div>
+
+      <!-- Мобильные иконки -->
+      <div class="mobile-icons">
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
         </div>
+        <div class="phone-icon" id="phoneIcon">
+          📞
+        </div>
+      </div>
+    </div>
+
+    <!-- Десктопное меню -->
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="#aboutUS" class="nav-item">Про Сузір'я</a></li>
+        <li><a href="#our-projects" class="nav-item">Проекти</a></li>
+        <li><a href="#our-amenities" class="nav-item">Послуги</a></li>
+      </ul>
+    </nav>
+
+    <div class="right-header">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id="openModal" data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
     </header>
 
     <main>
-
+      <section class="renovation-header renovation-container">
+        <div class="header-renovation-container">
+           <H1>ДИЗАЙН ПРОЕКТ</H1>
+        </div>
+      </section>
         <section class="renovation-hero">
             <img src="./assets/img/amenities-1.PNG" alt="Ремонт під ключ" class="renovation-hero-image">
         </section>
         
         <section class="renovation-content renovation-container-about-us">
             <p>Створюємо інтер’єр, який відповідає вашому стилю життя: продумане планування, візуалізації, підбір матеріалів та меблів. Дизайн-проєкт допоможе точно уявити майбутній простір і уникнути зайвих витрат під час ремонту.</p>
-            <button class="renovation-button">Замовити дзвінок</button>
+            <button id="openModal" data-target="modal" class="renovation-button open-modal-btn">Замовити дзвінок</button>
         </section>
 
         <section class="renovation-amenities renovation-container">
@@ -73,8 +107,9 @@
         <h2 class="renovation-amenities-title">Дизайн проект</h2>
         <p class="renovation-amenities-subtitle">від креслень вашого майбутнього житла до візуалізації</p>
       <div class="image-wrapper">
-        <img src="./assets/img/project-design.jpg" alt="title-img" class="renovation-amenities-title-image">
         <img src="./assets/img/project-design-1.jpg" alt="additional img" class="renovation-amenities-additional-img">
+        <img src="./assets/img/project-design.jpg" alt="title-img" class="renovation-amenities-title-image">
+        
     </div>
       </div>
     </div>
@@ -98,7 +133,7 @@
             <li>Найкращі варіанти перепланування та ергономіку</li>
             <li>Майбутнє розташування меблів, техніки й комунікацій</li>
         </ul>
-        <button class="planning-butt">Замовити дзвінок</button>
+        <button data-target="modal"  class="planning-butt open-modal-btn">Замовити дзвінок</button>
       </div>
     </div>
 </section>
@@ -117,13 +152,59 @@
             <li>Узгодженість усіх елементів між собою</li>
             <li>Варіанти оформлення, між якими легко обрати найкращий</li>
         </ul>
-        <button class="planning-butt">Замовити дзвінок</button>
+        <button data-target="modal" class="planning-butt open-modal-btn">Замовити дзвінок</button>
       </div>
         <img src="./assets/img/project-design-visual-2.jpg" alt="planning photo" class=" visual-img-2">
         <img src="./assets/img/project-design-visual-1.jpg" alt="second planning photo" class=" visual-img-1">
       
     </div>
 </section>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>ЗВ’ЯЗАТИСЯ З МЕНЕДЖЕРОМ</h2>
+    <form id="contactForm">
+      <label>Ім’я</label>
+      <input type="text" placeholder="Дарина" required>
+      <label>Телефон</label>
+      <input type="tel" placeholder="+380" required>
+      <button type="submit" class="submit-btn">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<!-- Модалка благодарности -->
+<div id="thankModal" class="modal">
+  <div class="modal-content thanks-content">
+    <span class="close" id="closeThank">&times;</span>
+    <img src="./assets/img/model-icon.png" alt="Success" width="80">
+    <h2>ДЯКУЄМО ЗА ВАШЕ ЗВЕРНЕННЯ!</h2>
+    <p>НАШІ МЕНЕДЖЕРИ ЗВ’ЯЖУТЬСЯ З ВАМИ В НАЙБЛИЖЧИЙ ЧАС</p>
+  </div>
+</div>
+
+<div class="modal" id="navModal">
+  <div class="modal-content">
+    <span class="close" id="closeNavModal">&times;</span>
+    <ul class="modal-links">
+      <li><a href="#aboutUS" class="nav-item mobile-item">Про Сузір'я</a></li>
+      <li><a href="#our-projects" class="nav-item mobile-item">Проекти</a></li>
+      <li><a href="#our-amenities" class="nav-item mobile-item">Послуги</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Модалка для телефона -->
+<div class="modal" id="phoneModal">
+  <div class="modal-content">
+    <span class="close" id="closePhoneModal">&times;</span>
+    <div class="modal-contact">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id='openModal' data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
+</div>
     </main>
     <footer>
         <div class="footer-container">
@@ -133,7 +214,7 @@
             </a>
             </div>
             <ul class="about-footer">
-                <li class="title-footer"><a href="index.html"> Сузір'я</a></li>
+                <li class="title-footer"> Сузір'я</li>
                 <li class="footer-text"><a href="tel:+380505824911">+38 050 582 49 11</a></li>
                 <li class="footer-text"><a href="mailto:suziria.kr@gmail.com">suziria.kr@gmail.com</a></li>
             </ul>
@@ -158,4 +239,8 @@
             </ul>
         </div>
     </footer>
+
+
+    <!-- JS connection-->
+    <script src="assets/js/nav.js"></script>
 </body>

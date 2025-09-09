@@ -1,88 +1,5 @@
-// hero video function//
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Hero video controls
-  const video = document.getElementById('myVideo');
-  const playBtn = document.getElementById('playBtn');
-
-  playBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (video.paused) {
-      video.play();
-      playBtn.classList.add('hidden');
-    } else {
-      video.pause();
-      playBtn.classList.remove('hidden');
-    }
-  });
-
-  video.addEventListener('click', () => {
-    if (!video.paused) {
-      video.pause();
-      playBtn.classList.remove('hidden');
-    } else {
-      video.play();
-      playBtn.classList.add('hidden');
-    }
-  });
-
-  video.addEventListener('ended', () => {
-    playBtn.classList.remove('hidden');
-  });
-
-  // Project image change
-  const projectLinks = {
-    "project-first": {
-      href: "europe.html",
-      img: "./assets/img/projects-europe.PNG",
-      alt: "Проект Сузір'я Європейське"
-    },
-    "project-second": {
-      href: "sky.html",
-      img: "./assets/img/project-sky.jpg",
-      alt: "Проект Сузір'я Скай"
-    },
-    "project-third": {
-      href: "2020.html",
-      img: "./assets/img/projects-sythiria2020.jpg",
-      alt: "Проект Сузір'я 2020"
-    },
-    "project-fourth": {
-      href: "2019.html",
-      img: "./assets/img/projects-sythiria2019.jpg",
-      alt: "Проект Сузір'я 2019"
-    }
-  };
-
-  Object.keys(projectLinks).forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener("click", () => {
-        const data = projectLinks[id];
-        const link = document.getElementById("projects-link");
-        const image = document.getElementById("project-image");
-        if (link && image) {
-          link.href = data.href;
-          image.src = data.img;
-          image.alt = data.alt;
-        }
-      });
-    }
-  });
-
-  // Contact Location Link
-  const iframe = document.getElementById('google-maps');
-  const links = document.querySelectorAll('.iframe-link');
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const newSrc = this.getAttribute('data-src');
-      if (iframe && newSrc) iframe.src = newSrc;
-    });
-  });
-
-  // Modal controls
-  const modal = document.getElementById('modal');
+const modal = document.getElementById('modal');
   const thankModal = document.getElementById('thankModal');
   const openModal = document.getElementById('openModal');
   const closeModal = document.getElementById('closeModal');
@@ -98,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (targetModal) targetModal.style.display = "flex";
     });
   });
+
   function closeAllModals() {
     document.querySelectorAll('.modal.active').forEach(m => m.classList.remove('active'));
   }
