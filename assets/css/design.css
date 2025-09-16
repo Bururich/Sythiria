@@ -99,15 +99,15 @@ html {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 65px;
-    height: 35px;
+    width: 90px;
+    height: 50px;
 }
 
 .logo img {
-    width:65px;
-    height: 35px;
+    width:90px;
+    height: 50px;
     flex: 0 0 auto;
-    background-color: var(--blure-color);
+    
 }
 
 .right-header { 
@@ -517,7 +517,7 @@ header {
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
 }
 
 .renovation-amenities-body {

@@ -17,13 +17,48 @@
     <title>Sythiria</title>
 </head>
 <body>
-    <header class="europe-header europe-container">
-        <div class="header-europe-container">
-           <H1>ЖК СУЗІРʼЯ СКАЙ</H1>
+    <header>
+        <div class="container">
+    <div class="header-left">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/img/footer-logo.png" alt="Sythiria Logo" />
+        </a>
+      </div>
+
+      <!-- Мобильные иконки -->
+      <div class="mobile-icons">
+        <div class="burger" id="burger">
+          <span></span><span></span><span></span>
         </div>
+        <div class="phone-icon" id="phoneIcon">
+          📞
+        </div>
+      </div>
+    </div>
+
+    <!-- Десктопное меню -->
+    <nav class="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="/index.html#aboutUS" class="nav-item">Про Сузір'я</a></li>
+        <li><a href="/index.html#our-projects" class="nav-item">Проекти</a></li>
+        <li><a href="/index.html#our-amenities" class="nav-item">Послуги</a></li>
+      </ul>
+    </nav>
+
+    <div class="right-header">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id="openModal" data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
     </header>
 
     <main>
+      <section class="europe-header europe-container"> 
+        <div class="header-europe-container">
+           <H1>ЖК СУЗІРʼЯ СКАЙ</H1>
+        </div>
+      </section>
         <section class="europe-hero sky-bg">
             <button class="europe-hero-butt">Обрати Квартиру</button>
         </section>
@@ -35,23 +70,22 @@
           <ul class="characteristics-list">
             <li><span class="label">Клас:</span><span class="value">комфорт</span></li>
             <li><span class="label">Кількість будинків:</span><span class="value">1</span></li>
-            <li><span class="label">Поверховість:</span><span class="value">3</span></li>
-            <li><span class="label">Стіни:</span><span class="value">газоблок 40см</span></li>
-            <li><span class="label">Утеплення:</span><span class="value">мінеральна вата 10 см</span></li>
-            <li><span class="label">Опалення:</span><span class="value">електричне</span></li>
-            <li><span class="label">Висота стелі:</span><span class="value">2,7м</span></li>
+            <li><span class="label">Поверховість:</span><span class="value">4</span></li>
+            <li><span class="label">Стіни:</span><span class="value">цегла</span></li>
+            <li><span class="label">Утеплення:</span><span class="value">пінопласт</span></li>
+            <li><span class="label">Опалення:</span><span class="value">індивідуальне електро</span></li>
+            <li><span class="label">Висота стелі:</span><span class="value">3,5м</span></li>
             <li><span class="label">Кімнатність квартир:</span><span class="value">1 / 2 / 3</span></li>
-            <li><span class="label">Кількість квартир:</span><span class="value">18</span></li>
-            <li><span class="label">Площа квартир:</span><span class="value">21 - 57 м²</span></li>
-            <li><span class="label">Територія:</span><span class="value">відкрита</span></li>
+            <li><span class="label">Кількість квартир:</span><span class="value">64</span></li>
+            <li><span class="label">Площа квартир:</span><span class="value">21 - 70 м²</span></li>
+            <li><span class="label">Територія:</span><span class="value">закритий двір</span></li>
             <li><span class="label">Стан квартир:</span><span class="value">без ремонту</span></li>
-            <li><span class="label">Паркінг:</span><span class="value">гостьовий</span></li>
+            <li><span class="label">Паркінг:</span><span class="value">гостьовий та критий</span></li>
           </ul>
            
            <p class="project-adress">
             <span class="bold-adress"> м. Кропивницький,<br>
-                проспект Європейський, 18А <br>
-                район Шкільний
+                вул. Степану Чобану, 2А <br>
            </p>
           </div>
           <div class="layout">
@@ -63,16 +97,16 @@
           </span>
         </div> 
     </div>
-            <img src="./assets/img/europe-kitchen.jpg" alt="Кухня" class="kitchen-photo">
-            <img src="./assets/img/europe-outdoor.jpg" alt="Вулиця" class="outdoor-photo">
+            <img src="./assets/img/sky-details-small.PNG" alt="Кухня" class="kitchen-photo">
+            <img src="./assets/img/sky-details-big.PNG" alt="Вулиця" class="outdoor-photo">
           </div>
         </section>
 
         <section class="about-europe europe-container">
             <div class="about-us-container">
             <div class="left-about-us">
-                <img class="outdoor-view" src="./assets/img/ourdoor-view.jpg">
-                <img class="playground-view" src="./assets/img/playground-view.png">
+                <img class="outdoor-view" src="./assets/img/sky-about-big.JPG">
+                <img class="playground-view" src="./assets/img/sky-about-small.PNG">
             </div>
             <div class="right-about-us">
              <div class="title-container">
@@ -133,6 +167,52 @@
             </div>
             <img class=" sky-image" src="./assets/img/sky-1.jpg" alt="description">
         </section>
+
+         <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h2>ЗВ’ЯЗАТИСЯ З МЕНЕДЖЕРОМ</h2>
+    <form id="contactForm">
+      <label>Ім’я</label>
+      <input type="text" placeholder="Дарина" required>
+      <label>Телефон</label>
+      <input type="tel" placeholder="+380" required>
+      <button type="submit" class="submit-btn">Надіслати</button>
+    </form>
+  </div>
+</div>
+
+<!-- Модалка благодарности -->
+<div id="thankModal" class="modal">
+  <div class="modal-content thanks-content">
+    <span class="close" id="closeThank">&times;</span>
+    <img src="./assets/img/model-icon.png" alt="Success" width="80">
+    <h2>ДЯКУЄМО ЗА ВАШЕ ЗВЕРНЕННЯ!</h2>
+    <p>НАШІ МЕНЕДЖЕРИ ЗВ’ЯЖУТЬСЯ З ВАМИ В НАЙБЛИЖЧИЙ ЧАС</p>
+  </div>
+</div>
+
+<div class="modal" id="navModal">
+  <div class="modal-content">
+    <span class="close" id="closeNavModal">&times;</span>
+    <ul class="modal-links">
+      <li><a href="/index.html#aboutUS" class="nav-item mobile-item">Про Сузір'я</a></li>
+      <li><a href="/index.html#our-projects" class="nav-item mobile-item">Проекти</a></li>
+      <li><a href="/index.html#our-amenities" class="nav-item mobile-item">Послуги</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Модалка для телефона -->
+<div class="modal" id="phoneModal">
+  <div class="modal-content">
+    <span class="close" id="closePhoneModal">&times;</span>
+    <div class="modal-contact">
+      <a class="tel-number" href="tel:+380505824911">+38 050 582 49 11</a>
+      <button id='openModal' data-target="modal" class="tel-button open-modal-btn">Замовити дзвінок</button>
+    </div>
+  </div>
+</div>
     </main>
     <footer>
         <div class="footer-container">
@@ -167,5 +247,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>
