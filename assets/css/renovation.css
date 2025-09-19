@@ -457,8 +457,9 @@ header {
     height: 190px;
     justify-content: space-between;
     gap: 150px;
-    align-items: left;
+    align-items: center;
     text-align: left;
+    
     
 }
 
@@ -520,10 +521,12 @@ header {
 
 .renovation-amenities-content {
   padding-top: 50px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 40px;
+  width: 100%;
 }
+
 
 .renovation-amenities-body {
   display: flex;
@@ -531,9 +534,10 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
+  width: 100%; /* ← оставляем */
+  /* max-width: 1200px; ← УДАЛИТЬ */
 }
+
 
 .renovation-amenities-list {
   flex: 1 1 600px;
@@ -655,7 +659,6 @@ header {
   height: 200px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border-radius: 8px;
 }
 
 

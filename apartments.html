@@ -40,9 +40,9 @@
     <!-- Десктопное меню -->
     <nav class="desktop-nav">
       <ul class="nav-links">
-        <li><a href="#aboutUS" class="nav-item">Про Сузір'я</a></li>
-        <li><a href="#our-projects" class="nav-item">Проекти</a></li>
-        <li><a href="#our-amenities" class="nav-item">Послуги</a></li>
+        <li><a href="/index.html#aboutUS" class="nav-item">Про Сузір'я</a></li>
+        <li><a href="/index.html#our-projects" class="nav-item">Проекти</a></li>
+        <li><a href="/index.html#our-amenities" class="nav-item">Послуги</a></li>
       </ul>
     </nav>
 
@@ -74,6 +74,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№1"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="20.8 м²"
             data-floor="2"
             data-complex="Європейське"
@@ -98,6 +99,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№2"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="25.3 м²"
             data-floor="2"
             data-complex="Європейське"
@@ -122,6 +124,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№3"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="22.5 м²"
             data-floor="2"
             data-complex="Європейське"
@@ -146,6 +149,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№4"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="34 м²"
             data-floor="2"
             data-complex="Європейське"
@@ -170,6 +174,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№5"
             data-status="продано"
+            data-status-class="status-sold"
             data-area="22.6 м²"
             data-floor="2"
             data-complex="Європейське"
@@ -194,6 +199,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№6"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="35.4 м²"
             data-floor="2"
             data-complex="Європейське"
@@ -218,6 +224,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№7"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="20.8 м²"
             data-floor="3"
             data-complex="Європейське"
@@ -242,6 +249,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№8"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="25.4 м²"
             data-floor="3"
             data-complex="Європейське"
@@ -266,6 +274,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№9"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="22.5 м²"
             data-floor="3"
             data-complex="Європейське"
@@ -290,6 +299,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№10"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="34 м²"
             data-floor="3"
             data-complex="Європейське"
@@ -314,6 +324,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№11"
             data-status="вільна"
+            data-status-class="status-free"
             data-area="22.6 м²"
             data-floor="3"
             data-complex="Європейське"
@@ -329,7 +340,7 @@
         </div>
         <div class="card-images">
           <img src="./assets/img/apartments-planning-1.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-1.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/apartment-interior-1.PNG" alt="Інтер'єр" class="interior-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
@@ -338,6 +349,7 @@
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№12"
             data-status="продано"
+            data-status-class="status-sold"
             data-area="35.4 м²"
             data-floor="3"
             data-complex="Європейське"
@@ -358,20 +370,25 @@
   <div class="apartment-modal-content">
     <span class="apartment-modal-close" onclick="closeApartmentModal()">×</span>
     <h3 id="modalTitle"></h3>
+    <div class="main-content">
 
     <div class="apartment-modal-images">
       <img id="modalPlan" src="" alt="План" />
-      <img id="modalInterior" src="" alt="Інтер'єр" />
+
     </div>
 
     <div class="apartment-modal-info">
-      <p><strong>ЖК:</strong> <span id="modalComplex"></span></p>
-      <p><strong>Статус:</strong> <span id="modalStatus"></span></p>
+      <div class="border-line">
+      <p><strong>ІНФОРМАЦІЯ</strong></p>
+      <p>ЖК Сузір’я<br> <strong><span id="modalComplex"></span></strong></p>
+      <p><strong>Статус:</strong> <span class="status" id="modalStatus"></span></p>
       <p><strong>Поверх:</strong> <span id="modalFloor"></span></p>
       <p><strong>Площа:</strong> <span id="modalArea"></span></p>
     </div>
-
-    <button class="apartment-select-btn">Обрати Квартиру</button>
+      <img id="modalInterior" src="" alt="Інтер'єр" />
+    </div>
+   </div>
+    <button data-target="modal" class="apartment-select-btn open-modal-btn">Обрати Квартиру</button>
   </div>
 </div>
 
@@ -381,12 +398,15 @@
     <span class="close" id="closeModal">&times;</span>
     <h2>ЗВ’ЯЗАТИСЯ З МЕНЕДЖЕРОМ</h2>
     <form id="contactForm">
-      <label>Ім’я</label>
-      <input type="text" placeholder="Дарина" required>
-      <label>Телефон</label>
-      <input type="tel" placeholder="+380" required>
-      <button type="submit" class="submit-btn">Надіслати</button>
-    </form>
+  <label>Ім’я</label>
+  <input type="text" name="name" placeholder="Дарина" required>
+  
+  <label>Телефон</label>
+  <input type="tel" name="phone" placeholder="+380" required>
+  
+  <button type="submit" class="submit-btn">Надіслати</button>
+</form>
+
   </div>
 </div>
 
@@ -421,7 +441,42 @@
     </div>
   </div>
 </div>
+
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+              <a href="index.html">
+                <img src="assets/img/footer-logo.png" alt="Sythiria Logo"/>
+              </a>
+            </div>
+            <ul class="about-footer">
+                <li class="title-footer">Про Сузір'я</li>
+                <li class="footer-text"><a href="tel:+380505824911">+38 050 582 49 11</a></li>
+                <li class="footer-text"><a href="mailto:suziria.kr@gmail.com">suziria.kr@gmail.com</a></li>
+            </ul>
+
+            <ul class="projects-footer">  
+                <li class="title-footer">Проекти</li>
+                <li class="footer-text"><a href="europe.html">Сузір’я Європейське</a></li>
+                <li class="footer-text"><a href="sky.html">Сузір’я Скай</a></li>
+                <li class="footer-text"><a href="2020.html">Сузір’я 2020</a></li>
+                <li class="footer-text"><a href="2019.html">Сузір’я 2019</a></li>
+            </ul>
+
+            <ul class="amenities-footer">
+                <li class="title-footer">Послуги</li>
+                <li class="footer-text"><a href="renovation.html">Ремонт “Під ключ”</a></li>
+                <li class="footer-text"><a href="design.html">Дизайн проект</a></li>
+            </ul>
+
+            <ul class="widgets-footer">
+                <li class="title-widgets-footer"><a class="footer-inst" href="https://www.instagram.com/suziria.kr/"><img onmouseover="this.src='./assets/img/contacts-instagram.png'" onmouseout="this.src='./assets/img/footer-instagram-icon.png'" src="./assets/img/footer-instagram-icon.png" alt="instagram icon"></a></li>
+                <li class="footer-widgets-text"><a class="footer-inst" href="https://www.facebook.com/share/1AWcnf2xTA/?mibextid=wwXIfr"><img onmouseover="this.src='./assets/img/contacts-facebook.png'" onmouseout="this.src='./assets/img/footer-facebook-icon.png'" src="./assets/img/footer-facebook-icon.png" alt="facebook icon"></a></li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/apartmaents.js"></script>

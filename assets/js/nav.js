@@ -116,4 +116,85 @@ const modal = document.getElementById('modal');
       if (burger) burger.classList.remove("active");
     });
   });
+
+
+
 });
+
+
+
+ (() => {
+  const TOKEN = '8314970289:AAH9sivUDjWNiRjemSllO6lcFqqGPxY51E8';     // например: 123456789:ABC...
+  const CHAT_ID = '780514846';       // например: 123456789
+
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', onSubmit);
+
+  async function onSubmit(e) {
+    e.preventDefault();
+
+    const submitBtn = form.querySelector('.submit-btn');
+    const data = new FormData(form);
+    const name = (data.get('name') || '').toString().trim();
+    const phone = (data.get('phone') || '').toString().trim();
+
+    // Быстрый лог для проверки (можно убрать)
+    console.log('name:', name, 'phone:', phone);
+
+    if (!name || !phone) {
+      alert('Заповніть ім’я та телефон');
+      return;
+    }
+
+    const text =
+      `📩 <b>Нова заявка</b>\n` +
+      `👤 Ім’я: ${escapeHtml(name)}\n` +
+      `📱 Телефон: ${escapeHtml(phone)}`;
+
+    try {
+      toggleBtn(submitBtn, true, 'Відправляю…');
+
+      const res = await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text,
+          parse_mode: 'HTML'
+        })
+      });
+
+      const json = await res.json();
+
+      if (!res.ok) {
+        throw new Error(json?.description || 'Telegram API error');
+      }
+
+      
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert('Помилка: ' + (err?.message || 'Не вдалося надіслати'));
+    } finally {
+      toggleBtn(submitBtn, false, 'Надіслати');
+    }
+  }
+
+  function toggleBtn(btn, loading, text) {
+    if (!btn) return;
+    btn.disabled = loading;
+    btn.textContent = text;
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, m => (
+      m === '&' ? '&amp;' :
+      m === '<' ? '&lt;' :
+      m === '>' ? '&gt;' :
+      m === '"' ? '&quot;' : '&#39;'
+    ));
+  }
+})();
+

@@ -15,11 +15,57 @@
     width: 600px;
 }
 
-.sky-text p {
-    font-size: 14px;
-    margin-bottom: 60px;
+.sky-text-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+  padding: 40px 20px;
 }
 
-.bottom-text-sky {
-    margin-top: 50px;
+.sky-text-layout p {
+  font-size: 14px;
+  font-family: var(--default-font);
+  margin: 0;
+}
+
+.center-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: left;
+  margin-top: auto;
+}
+
+.top-text {
+  text-align: left;
+}
+
+.bottom-text {
+  margin-top: auto;
+  text-align: left;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .sky-text-layout {
+    padding: 20px 10px;
+    min-height: auto;
+  }
+
+  .center-text {
+    gap: 20px;
+  }
+
+  .bottom-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+.number-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blure-color);
+    margin-right: 5px;
 }
