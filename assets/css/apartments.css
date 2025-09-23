@@ -419,6 +419,7 @@ header {
 .catalog-title {
   text-align: center;
   font-size: 24px;
+  font-family: var(--default-font);
   margin-bottom: 30px;
 }
 
@@ -435,7 +436,8 @@ header {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--text-color);
+  border: 1px solid var(--text-color);
+  background-color: #f3f3f3;
 }
 
 .apartment-card:hover {
@@ -447,6 +449,7 @@ header {
   justify-content: space-between;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: var(--default-font);
 }
 
 .apartment-number {
@@ -454,16 +457,18 @@ header {
   background-color: var(--blure-color);
   color: var(--background-color);
   padding: 10px;
+  font-family: var(--default-font);
 }
 
 .status.sold {
   background: var(--sold-color);
-  color: white;
+  color: var(--text-color);
   padding: 1px 6px;
   text-align: center;
   font-size: 12px;
-  border-left: 2px solid var(--blure-color);
-  border-bottom: 2px solid var(--blure-color);
+  font-family: var(--default-font);
+  border-left: 1px solid var(--blure-color);
+  border-bottom: 1px solid var(--blure-color);
 }
 
 .status {
@@ -472,6 +477,7 @@ header {
   padding: 1px 6px;
   text-align: center;
   font-size: 12px;
+  font-family: var(--default-font);
   border-left: 2px solid var(--blure-color);
   border-bottom: 2px solid var(--blure-color);
   height: 20px;
@@ -496,6 +502,7 @@ header {
 .card-info h4 {
   margin: 0 0 8px;
   font-size: 18px;
+  font-family: var(--default-font);
 }
 
 .card-info {
@@ -506,6 +513,7 @@ header {
 .card-info p {
   margin: 4px 0;
   font-size: 14px;
+  font-family: var(--default-font);
 }
 
 .details-btn {
@@ -516,12 +524,13 @@ header {
   padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
+  font-family: var(--default-font);
   font-size: 14px;
   transition: background 0.3s ease;
 }
 
 .details-btn:hover {
-  background: #5e36d6;
+  background: var(--blure-color);
 }
 
 @media (max-width: 480px) {
@@ -658,16 +667,24 @@ input {
   right: 15px;
   font-size: 24px;
   cursor: pointer;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
   border: 1px solid var(--text-color);
+  border-radius: 6px;
+  transition: ease-in-out 0.3s;
+}
+
+.apartment-modal-close:hover {
+  background-color: var(--hover-color);
+  color: var(--background-color);
+  border-color: var(--background-color);
 }
 
 .apartment-modal-images {
   display: flex;
   gap: 10px;
-  margin: 20px 0;
-  height: 400px ;
+  margin-bottom: 20px ;
+  height: 560px ;
   width: 70vw;
   align-self: center;
   justify-self: center;
@@ -675,17 +692,18 @@ input {
 
 .apartment-modal-images img {
   width: 100%;
-  max-height: 600px;
+  max-height: 900px;
   height: 100%;
   object-fit: contain;
   margin-left: 50px;
 }
 
 #modalInterior {
-  width: 140px;
+  width: 180px;
   max-height: 200px;
   object-fit: contain;
   margin-top: 10px;
+  
 }
 
 .status-sold {
@@ -693,13 +711,15 @@ input {
 }
 
 .status-free { 
-  background-color: #fff;
+  background-color: var(--accent-color);
+  opacity: 0.8;
  }
 
 .apartment-modal-info p {
   margin: 6px 0;
-  font-size: 14px;
+  font-size: 18px;
   font-family: var(--default-font);
+  font-weight: regular;
 }
 
 #modalStatus {
@@ -709,9 +729,12 @@ input {
 
 .apartment-modal-info {
   display: block;
-  margin-top: 20vh;
+  margin-top: 1vh;
   margin-right: 40px;
-  
+  max-width: 180px;
+  max-height: 350px;
+  width: 100%;
+  height: 100%;
 }
 
 .border-line {

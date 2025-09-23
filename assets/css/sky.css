@@ -19,8 +19,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 50vh;
+  max-height: 350px;
   padding: 40px 20px;
+  height: 100%;
 }
 
 .sky-text-layout p {

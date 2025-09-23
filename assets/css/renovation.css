@@ -464,7 +464,7 @@ header {
 }
 
 .renovation-content p {
-    font-size: 20px;
+    font-size: 18px;
     font-family: var(--default-font);
     color: var(--text-color);
     width: 600px;
@@ -658,7 +658,7 @@ header {
   width: 400px;
   height: 200px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  
 }
 
 
@@ -704,8 +704,6 @@ header {
   height: auto;
   object-fit: cover;
   margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 }
 

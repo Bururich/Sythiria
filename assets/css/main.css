@@ -139,13 +139,13 @@ html {
     height: 44px;
     background-color: var(--hover-color);
     color: var(--text-color);
-    border-color: #36517E;
     border-radius: 7px;
     transition: ease-in-out 0.3s;
+    border: none;
 }
 
 .tel-button:hover {
-  background-color: #c4c4c4;
+  background-color: var(--blure-color);
   color: var(--background-color);
   border-color: var(--background-color);
 }
@@ -550,18 +550,21 @@ header {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
+  font-family: var(--default-font);
 }
 
 .description-title {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 24px;
+  font-family: var(--default-font);
 }
 
 .description-text {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
+  font-family: var(--default-font);
 }
 
 /* Средняя колонка */
@@ -578,6 +581,7 @@ header {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 24px;
+  font-family: var(--default-font);
 }
 
 .description-item {
@@ -600,6 +604,7 @@ header {
 .item-text {
   font-size: 14px;
   color: var(--text-color);
+  font-family: var(--default-font);
 }
 
 /* Правая колонка */
@@ -640,6 +645,7 @@ header {
   font-weight: bold;
   color: #FFD700;
   margin-bottom: 10px;
+  font-family: var(--default-font);
 }
 
 /* Подпись */
@@ -648,6 +654,7 @@ header {
   color: #000;
   line-height: 1.4;
   text-align: center;
+  font-family: var(--default-font);
 }
 
 /* Угловые рамки */
@@ -1046,7 +1053,7 @@ header {
   height: 500px;
   background: linear-gradient(rgba(34,84,144,0.7), rgba(34,84,144,0.7)), url(../img/how-to-buy-newBg.png);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   margin-top: 30px;
 }
 
@@ -1530,7 +1537,25 @@ header {
   color: var(--hover-color);
 }
 
+@media (min-width: 1680px) {
+  .contact-us-details {
+    width: 500px;
+    margin-left: 100px;
+  }
 
+  .contact-location {
+    width: 500px;
+    height: auto;
+    
+  }
+  .contact-location-item {
+    width: 250px;
+  }
+  .contact-us-item {
+    width: 230px;
+  }
+  
+}
 
 @media (max-width: 1480px) {
   .contact-us {

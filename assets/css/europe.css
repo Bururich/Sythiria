@@ -630,7 +630,7 @@ header {
 /* about us styles */
 
 .about-europe {
-    height: 530px;
+   
     margin-top: 60px;
     margin-bottom: 80px;
     
@@ -641,19 +641,20 @@ header {
   justify-content: space-between; /* прижимает левую и правую части */
   align-items: flex-start;
   flex-wrap: wrap; /* для адаптивности */
-  gap: 24px;
+ 
 }
 .left-about-us {
   display: flex;
   align-items: flex-start;
   flex: 1;
   min-width: 300px;
+  max-height: 60vw;
 }
 
 .outdoor-view {
   width: 100%;
   max-width: 400px;
-  height: 73vh;
+  height: 60vh;
 }
 
 
@@ -661,8 +662,9 @@ header {
   width: 100%;
   max-width: 300px;
   height: 300px;
-  margin-top: 32vh;
+  
   margin-left: 40px;
+  align-self: flex-end;
 }
 
 .right-about-us {
