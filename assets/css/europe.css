@@ -442,13 +442,16 @@ header {
 
 
  .europe-hero-butt {
-    width: 380px;
-    height: 90px;
+    width: 240px;
+    height: 60px;
     z-index: 2;
+    font-family: var(--default-font);
+    font-size: 16px;
     background-color: var(--border-color);
     color: var(--text-color);
     border-color: var(--blure-color);
     border-radius: 7px;
+    border: 1px solid;
     transition: ease-in-out 0.3s;
     display: flex;
     text-decoration: none;
@@ -470,6 +473,7 @@ header {
 .project-details {
     margin-top: 60px;
     display: flex;
+    justify-content: space-between;
 }
 .characteristics-list {
   list-style: none;
@@ -521,9 +525,9 @@ header {
 
 .layout {
   position: relative;
-  width: 100%;
+  width: 60%;
   height: 600px;
-  margin-left: 70px; /* или под размер макета */
+  
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -625,6 +629,11 @@ header {
   bottom: 0;
   right: 0;
   border-width: 0 3px 3px 0;
+}
+@media (max-width: 1280px){
+  .price-tag {
+    left: 30px;
+  }
 }
 
 /* about us styles */
@@ -763,20 +772,37 @@ header {
     border: none;
     width: 400px;
     height: 45px;
-    background-color: var(--blure-color);
+    background-color: var(--hover-color);
     color: var(--background-color);
+    font-family: var(--default-font);
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 8px;
     transition: ease-in-out 0.3s;
 }
 
 .about-europe-button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--blure-color);
 }
 
 .about-europe-button:active {
     background-color: var(--accent-color);
+}
+
+@media (max-width: 1280px) {
+  .outdoor-view {
+    max-width: 300px;
+    height: 62vh;
+  }
+  .playground-view {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  
+  margin-left: 20px;
+  align-self: flex-end;
+}
 }
 
 @media (max-width: 748px) {
