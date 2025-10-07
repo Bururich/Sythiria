@@ -47,6 +47,24 @@
   text-align: left;
 }
 
+@media (width: 1024px) {
+ .sky-text-layout p {
+    font-size: 12px;
+  }
+
+  .sky-image {
+    width: 400px;
+  }
+
+  .small-sky {
+    max-height: 200px ;
+  }
+
+  .sky-price-tag {
+    left: 10px;
+  }
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   .sky-text-layout {

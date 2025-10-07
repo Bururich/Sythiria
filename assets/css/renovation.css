@@ -140,9 +140,9 @@ html {
 }
 
 .tel-button:hover {
-  background-color: #c4c4c4;
+  background-color: var(--blure-color);
   color: var(--background-color);
-  border-color: var(--background-color);
+  
 }
 @media (min-width: 1480px){
 header {
@@ -491,6 +491,20 @@ header {
   color: var(--background-color);
 }
 
+@media (max-width: 1480px) {
+
+  .renovation-content p {
+    width: 100%;
+    font-size: 14px;
+    height: auto;
+  }
+
+  .renovation-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 @media(max-width: 768px) {
   .renovation-content {
     flex-direction: column;
@@ -599,6 +613,7 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
+  height: 100%;
 }
 
 .amenities-column {
@@ -614,6 +629,7 @@ header {
   padding: 10px;
   line-height: 1.4;
   text-align: center;
+  font-family: var(--default-font);
   border-bottom: 1px solid var(--blure-color);
   overflow: hidden;
   word-break: break-word;
@@ -668,6 +684,23 @@ header {
   height: 400px;
 }
 
+@media (width: 1920px) {
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .amenities-column li {
+    font-size: 18px;
+    padding: 19px;
+    min-height: 30px;
+  }
+
+  .renovation-amenities-additional-img {
+    width:350px;
+    height: 180px;
+  }
+}
+
 @media (min-width: 1024px) and (max-width: 1439px) {
   .renovation-amenities-body {
     display: grid;
@@ -705,6 +738,50 @@ header {
   object-fit: cover;
   margin: 20px 0;
   }
+
+  .amenities-column li {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-size: 15px;
+}
+}
+
+@media(width: 1024px) {
+  .amenities-column li {
+    font-size: 12px;
+    width: 110px;
+  }
+
+  .stat-number {
+  font-size: 14px;
+  }
+
+  .renovation-amenities-additional-img {
+    width: 250px;
+    height: 180px;
+    margin: 40px 0;
+    right: 300px;
+  }
+  .renovation-amenities-title-image {
+    width: 100%;
+    height: 400px;
+    max-width: 280px;
+  }
+
+  .block::before,
+.block::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-color: #002B5C;
+  border-style: solid;
+}
+    .renovation-amenities-header {
+      width: 280px;
+    }
 }
 
 
@@ -835,6 +912,18 @@ footer {
   display: flex;
 }
 
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  color: var(--background-color);
+  transition: fill 0.5s;
+}
+
+.footer-icon:hover {
+  color: var(--hover-color);
+}
+
 .footer-text a {
   text-decoration: none;
   color: inherit;
@@ -847,6 +936,45 @@ color: var(--accent-color);
 
 .footer-inst :hover {
 color: var(--accent-color);
+}
+
+@media (width: 1280px) {
+  .amenities-footer .footer-text {
+    width: 150px;
+  }
+
+  .amenities-footer {
+    margin-right: 10px !important;
+  }
+
+  .footer-logo img {
+    width: 180px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-logo {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .footer-container ul {
+    margin-right: 40px;
+    height: auto;
+  }
+
+  .footer-logo img {
+    width: 180px;
+    height: auto;
+  }
+
+  .footer-text {
+    font-size: 10px;
+    margin-bottom: 6px;
+    width: 95px;
+  }
+  
 }
 
 @media (max-width: 768px) {

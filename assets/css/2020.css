@@ -33,3 +33,9 @@
     }
 }
 
+@media (width: 1024px) {
+    .small-photo {
+        height: 250px;
+    }
+}
+
