@@ -142,16 +142,21 @@ section {
     width: 170px;
     height: 44px;
     background-color: var(--hover-color);
-    color: var(--text-color);
+    color: var(--background-color);
+    border-color: #36517E;
     border-radius: 7px;
+    box-shadow: none;
     transition: ease-in-out 0.3s;
-    border: none;
 }
 
 .tel-button:hover {
+  background-color: #9EC5E1;
+  color: var(--background-color);
+}
+
+.tel-button:active {
   background-color: var(--blure-color);
   color: var(--background-color);
-  border-color: var(--background-color);
 }
 @media (min-width: 1480px){
 header {
@@ -345,10 +350,11 @@ header {
   }
 
   .container {
+    display: flex;
    position: relative;
     height: 50px;
     margin: 0;
-    
+    align-items: center;
   }
 
   .logo {
@@ -362,8 +368,9 @@ header {
 
   .logo img {
   display: block;
-  height: 40px; /* или auto, если адаптивный */
+  height: 50px; /* или auto, если адаптивный */
   object-fit: contain;
+  width: 70px;
   }
     header {
     height: auto;
@@ -372,9 +379,7 @@ header {
     
   }
 
-  .container {
-    align-items: center;
-  }
+  
 
   .logo,
   .right-header,
@@ -993,12 +998,17 @@ header {
 @media (max-width: 768px) {
   .projects {
     height: auto;
-    padding: 40px 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .projects-container {
     margin: 0;
     padding: 0;
+    width: 90%;
   }
 
   .title-container {
@@ -1161,7 +1171,7 @@ header {
 @media (max-width: 768px) {
   .how-to-order {
     height: auto;
-    padding: 40px 20px;
+    padding-top: 40px ;
     background-position: top;
     background: url(../img/how-to-order-mobBg.jpg);
   }
@@ -1183,6 +1193,8 @@ header {
     height: auto;
     width: 100%;
     max-width: 200px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .how-to-order-icon {
@@ -1200,6 +1212,11 @@ header {
     font-size: 14px;
     line-height: 1.4;
   }
+
+  .how-to-buy-container {
+    padding-bottom: 40px;
+  }
+  
 }
 
 /* Amenities Section*/
@@ -1341,6 +1358,7 @@ header {
 
   .amenities-image {
     width: 100%;
+    min-height: 300px;
     height: auto;
     border-radius: 6px;
   }
@@ -1361,7 +1379,7 @@ header {
 }
 
 .contact-us-container {
-  max-width: 1400px;
+ 
   margin: 0 auto;
   padding: 60px 40px;
   box-sizing: border-box;
@@ -1432,6 +1450,7 @@ header {
     font-size: 18px !important;
   }
 
+
 .google-map{
   min-width: 600px !important;
   min-height: 600px !important;
@@ -1457,7 +1476,22 @@ header {
 .contact-location-icon {
   width: 30px !important;
   height: 30px !important;
-  margin-top: 12px !important;}
+  margin-top: 12px !important;
+}
+
+.contact-us-after-title-container{
+  padding-left: 40px;
+}
+
+.contact-us-title-container {
+  width: 1400px;
+  max-width: 1080px;
+  
+}
+
+.contact-us-img{
+  min-width: 550px !important;
+}
 
 }
 
@@ -1632,7 +1666,7 @@ header {
   
 }
 
-@media (max-width: 1280px) {
+@media (width: 1280px) {
   .contact-us {
     display: grid;
     grid-template-columns: 1fr 300px; /* сохраняем картинку справа */
@@ -1642,8 +1676,9 @@ header {
 
   .contact-us-img {
     position: absolute;
-    width: 18%;
+    width: 10%;
     height: 100%;
+    min-width: 250px;
   }
 
   .contact-us-image {
@@ -1790,7 +1825,7 @@ header {
   }
 
   .contact-us-title-container {
-    
+    max-width: 350px;
     align-items: flex-start;
     gap: 8px;
     margin-top: 0;
@@ -1813,9 +1848,14 @@ header {
     order: 1;
   }
 
+  .google-map {
+    min-width: 350px;
+  }
+
   .google-map iframe {
+   
     width: 100%;
-    height: 300px;
+    height: 450px;
     border-radius: 8px;
   }
 
@@ -1828,12 +1868,14 @@ header {
   }
 
   .contact-us-details-items {
-    
+    flex-wrap: wrap;
     gap: 24px;
+    margin-left: 13px;
+    padding-bottom: 20px;
   }
 
   .contact-us-item {
-    min-width: 120px;
+    min-width: 140px;
     margin-top: 20px;
   }
 
@@ -1937,7 +1979,7 @@ footer {
 color: var(--accent-color);
 }
 
-@media (max-width: 1024px) {
+@media (width: 1024px) {
   .footer-logo {
     margin-left: 80px;
     margin-right: 80px;

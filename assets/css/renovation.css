@@ -133,16 +133,21 @@ html {
     width: 170px;
     height: 44px;
     background-color: var(--hover-color);
-    color: var(--text-color);
+    color: var(--background-color);
     border-color: #36517E;
     border-radius: 7px;
+    box-shadow: none;
     transition: ease-in-out 0.3s;
 }
 
 .tel-button:hover {
+  background-color: #9EC5E1;
+  color: var(--background-color);
+}
+
+.tel-button:active {
   background-color: var(--blure-color);
   color: var(--background-color);
-  
 }
 @media (min-width: 1480px){
 header {
@@ -353,8 +358,9 @@ header {
 
   .logo img {
   display: block;
-  height: 40px; /* или auto, если адаптивный */
+  height: 50px; /* или auto, если адаптивный */
   object-fit: contain;
+  width: 70px;
   }
     header {
     height: auto;
@@ -477,12 +483,12 @@ header {
     height: 50px;
     background-color: var(--accent-color);
     color: var(--background-color);
-    border:none;
+    border: 1px solid var(--blure-color);
     border-radius: 8px;
 }
 
 .renovation-button:hover {
-    background-color: var(--blure-color);
+    background-color: #9EC5E1;
     transition: 0.3s ease-in-out;
 }
 
@@ -525,8 +531,8 @@ header {
   }
 
   .renovation-container-about-us {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding-bottom: 20px;
   }
 
@@ -789,10 +795,14 @@ header {
 /* 📱 Адаптивность */
 @media (max-width: 768px) {
   
+  .renovation-amenities-content {
+    padding-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
 
   .renovation-amenities-body {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 20px;
     align-items: start;
   }
@@ -809,7 +819,7 @@ header {
   }
 
   .stat-number {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .amenities-columns {
@@ -818,7 +828,7 @@ header {
   }
 
   .amenities-column li {
-    font-size: 11px;
+    font-size: 10px;
     padding: 6px;
     min-height: 24px;
   }
@@ -835,7 +845,7 @@ header {
 
   .image-wrapper {
     width: 100%;
-    max-width: 100%;
+    height: 20px;
     gap: 12px;
   }
 
@@ -845,8 +855,8 @@ header {
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: absolute;
-    bottom: 110px;   /* отступ от нижнего края */
-    right: 120px;     /* отступ от левого края */
+    bottom: -410px;   /* отступ от нижнего края */
+    left: 200px;     /* отступ от левого края */
     width: 170px;
     height: 100px;
     object-fit: cover;
@@ -855,6 +865,18 @@ header {
     width: 100%;
     height: auto;
     display: none;
+  }
+
+  .renovation-amenities-list {
+    order: 1;
+  }
+
+  .renovation-amenities-header {
+    text-align: left;
+  }
+
+  .renovation-amenities-title {
+    font-weight: bold;
   }
 }
 
@@ -953,7 +975,7 @@ color: var(--accent-color);
   }
 }
 
-@media (max-width: 1024px) {
+@media (width: 1024px) {
   .footer-logo {
     margin-left: 80px;
     margin-right: 80px;

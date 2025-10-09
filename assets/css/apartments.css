@@ -140,13 +140,19 @@ html {
     width: 170px;
     height: 44px;
     background-color: var(--hover-color);
-    color: var(--text-color);
+    color: var(--background-color);
     border-color: #36517E;
     border-radius: 7px;
+    box-shadow: none;
     transition: ease-in-out 0.3s;
 }
 
 .tel-button:hover {
+  background-color: #9EC5E1;
+  color: var(--background-color);
+}
+
+.tel-button:active {
   background-color: var(--blure-color);
   color: var(--background-color);
 }
@@ -471,7 +477,8 @@ header {
 }
 
 .status {
-  background: var(--background-color);
+  background-color: var(--accent-color);
+  opacity: 0.8;
   color: var(--text-color);
   padding: 1px 6px;
   text-align: center;
@@ -531,7 +538,7 @@ header {
 }
 
 .details-btn:hover {
-  background: var(--blure-color);
+  background: #9EC5E1;
 }
 
 @media (max-width: 480px) {
@@ -745,7 +752,7 @@ input {
 
 .apartment-select-btn {
   display: block;
-  background: var(--blure-color);
+  background: var(--accent-color);
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
@@ -759,7 +766,7 @@ input {
 }
 
 .apartment-select-btn:hover {
-    background-color: var(--hover-color);
+    background-color: #9EC5E1;
 }
 
 @keyframes fadeIn {

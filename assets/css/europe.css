@@ -140,13 +140,19 @@ html {
     width: 170px;
     height: 44px;
     background-color: var(--hover-color);
-    color: var(--text-color);
+    color: var(--background-color);
     border-color: #36517E;
     border-radius: 7px;
+    box-shadow: none;
     transition: ease-in-out 0.3s;
 }
 
 .tel-button:hover {
+  background-color: #9EC5E1;
+  color: var(--background-color);
+}
+
+.tel-button:active {
   background-color: var(--blure-color);
   color: var(--background-color);
 }
@@ -444,7 +450,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/projects-europe.PNG);
+    background-image: url(../img/projects-europe.png);
     background-size: cover; /* Ensures the image covers the container */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating */
@@ -846,7 +852,7 @@ header {
     border: none;
     width: 400px;
     height: 45px;
-    background-color: var(--blure-color);
+    background-color: var(--accent-color);
     color: var(--background-color);
     font-family: var(--default-font);
     border-radius: 8px;
@@ -855,7 +861,7 @@ header {
 }
 
 .about-europe-button:hover {
-    background-color: var(--accent-color);
+    background-color: #9EC5E1;
 }
 
 .about-europe-button:active {
@@ -883,11 +889,20 @@ header {
 @media (width: 1920px) {
   .playground-view {
   width: 100%;
-  max-width: 300px;
-  height: 350px;
+  max-width: 350px;
+  height: 380px;
   
   margin-left: 20px;
   align-self: flex-end;
+}
+
+.outdoor-view{
+  max-width: 500px;
+  height: 50vh;
+}
+
+.left-about-us {
+  max-height: 50vh;
 }
 }
 
@@ -962,7 +977,7 @@ header {
     height: 400px;
     margin-top: 90px;
     margin-bottom: 80px;
-    justify-content: space-between;
+    justify-content: center;
     
     align-items: center;
 }
