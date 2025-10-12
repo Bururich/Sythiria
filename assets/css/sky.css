@@ -78,8 +78,16 @@
   }
 
   .bottom-text {
-    text-align: center;
+    text-align: left;
     margin-top: 40px;
+  }
+
+  .small-sky {
+    max-height: 165px;
+  }
+
+  .sky-image {
+    max-width: 360px;
   }
 }
 
@@ -89,3 +97,6 @@
     color: var(--blure-color);
     margin-right: 5px;
 }
+
+
+

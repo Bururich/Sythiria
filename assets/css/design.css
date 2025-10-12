@@ -355,13 +355,14 @@ header {
     top: 50%;
     transform: translateY(-50%);
     margin-left: 20px;
-    
+    height: 60px;
   }
 
   .logo img {
   display: block;
-  height: 40px; /* или auto, если адаптивный */
+  height: 60px; /* или auto, если адаптивный */
   object-fit: contain;
+  width: 110px;
   }
     header {
     height: auto;
@@ -429,6 +430,28 @@ header {
     font-size: 47px;
     font-family: var(--default-font);
     margin: 0;
+}
+
+@media (max-width: 768px) {
+  .renovation-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header-renovation-container h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .header-renovation-container {
+    height: 60px;
+  }
+
+  .renovation-header {
+   height: 60px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
 }
 
 /* Renovation Hero Section */
@@ -510,8 +533,8 @@ header {
   }
 
   .renovation-container-about-us {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding-bottom: 20px;
   }
 
@@ -818,8 +841,8 @@ header {
 /* 📱 Адаптивность */
 @media (max-width: 768px) {
   .renovation-container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .renovation-amenities-body {
     display: grid;
@@ -847,10 +870,11 @@ header {
     position: relative;
     padding: 5px;
     text-align: left;
+    height: 40px;
   }
 
   .stat-number {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   .block::before,
@@ -883,8 +907,8 @@ header {
   }
 
   .amenities-column li {
-    font-size: 10px;
-    text-align: left;
+    font-size: 7px;
+    text-align: center;
     padding: 6px 0;
     border-bottom: 1px solid #ccc;
   }
@@ -920,6 +944,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    height: 300px;
   }
 
   .renovation-amenities-title-image,
@@ -931,10 +956,44 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
+  .renovation-amenities-title-image {
+    display: none;
+  }
+
   .renovation-amenities-additional-img {
     display: inline-block;
     position: static;
   }
+
+  .mobile-img {
+    display: block !important; 
+  }
+  .renovation-amenities-content {
+    padding-top: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+.mobile-img {
+  display: none;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mobile-title-image {
+  width: 100%;
+  
+  height: 380px;
+}
+
+.mobile-title-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
 }
 
 /* Planning section*/
@@ -943,6 +1002,7 @@ header {
     height: 400px;
     margin-bottom: 80px;
 }
+
 
 .planning-container {
   display: flex;
@@ -1166,6 +1226,12 @@ font-size: 12px;
 @media (width: 1920px) {
   .visual-img {
     width: 500px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .planning {
+    display: none;
   }
 }
 
@@ -1443,6 +1509,7 @@ color: var(--accent-color);
   .footer-text {
     font-size: 13px;
     margin-bottom: 6px;
+    width: auto;
   }
 
   .widgets-footer {

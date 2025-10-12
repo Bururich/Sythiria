@@ -361,13 +361,13 @@ header {
     top: 50%;
     transform: translateY(-50%);
     margin-left: 20px;
-    
   }
 
   .logo img {
   display: block;
-  height: 40px; /* или auto, если адаптивный */
+  height: 50px; /* или auto, если адаптивный */
   object-fit: contain;
+  width: 110px;
   }
     header {
     height: auto;
@@ -437,10 +437,20 @@ header {
   }
 }
 
+@media (max-width: 768px) {
   .header-europe-container h1 {
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
+    
   }
+
+  .europe-header{
+    height: 50px;
+    padding-top: 5rem;
+    padding-bottom: 20px;
+
+  }
+}
 
  /* Hero Styles*/
 
@@ -458,7 +468,7 @@ header {
 
 
  .europe-hero-butt {
-    width: 240px;
+    width: 360px;
     height: 60px;
     z-index: 2;
     font-family: var(--default-font);
@@ -467,7 +477,7 @@ header {
     color: var(--text-color);
     border-color: var(--blure-color);
     border-radius: 7px;
-    border: 1px solid;
+    border: 2px solid;
     transition: ease-in-out 0.3s;
     display: flex;
     text-decoration: none;
@@ -482,6 +492,14 @@ header {
 
    .europe-hero-butt:hover {
     background-color: var(--hover-color);
+   }
+   @media (max-width: 1024px) {
+
+    .europe-hero-butt {
+      width: 360px;
+      height: 70px;
+      font-size: 14px;
+    }
    }
 
 /* Project details style */
@@ -716,10 +734,52 @@ header {
 }
 }
 
+@media (max-width: 768px) {
+  .europe-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .project-details {
+    flex-wrap: wrap;
+  }
+
+  .left-project-details {
+    width: 100%;
+  }
+
+  .layout {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .outdoor-photo {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .kitchen-photo {
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .price-tag {
+  top: 20px;
+  left: 0px;
+}
+}
+
 /* about us styles */
 
 .about-europe {
-   
     margin-top: 60px;
     margin-bottom: 80px;
     
@@ -969,6 +1029,77 @@ header {
     margin-left: 20px;
     margin-right: 20px;
   }
+
+  .title-container {
+    text-align: left;
+    width: 100%;
+  }
+
+  .title-container h2 {
+    font-size: 16px;
+  }
+
+  .title-container h4{
+    font-size: 10px;
+  }
+
+  .right-about-us {
+    order: -1;
+  }
+
+  .playground-view {
+    height: 200px;
+    width: 170px;
+  }
+
+  .outdoor-view {
+    height: 200px;
+    max-width: 170px;
+  }
+
+  .left-about-us {
+    margin-top: 20px;
+  }
+
+  .item-about-us {
+    max-width: 80px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .stat-number {
+    font-size: 16px;
+    width: 20px;
+  }
+
+  .about-block {
+    padding-right: 30px;
+    padding-left: 1px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .item-list-about {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .item-list-about:last-child .about-block {
+    padding-left: 25px;
+  }
+
+  .item-text {
+    margin-top: 40px;
+  }
+
+  .item-text p {
+    font-size:12px;
+  }
+
+  .about-europe-button {
+    width: 360px;
+    height: 44px;
+  }
+
 }
 /* Description styles */
 
@@ -1046,6 +1177,33 @@ header {
 
   .description {
     height: 250px
+  }
+}
+
+@media (max-width: 768px) {
+  .description {
+    flex-direction: column;
+    height: auto;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .description-image {
+   max-width: 360px !important;
+    width: 100%;
+    height: 160px;
+    max-width: 300px;
+    margin: 20px 0 0 0;
+    
+  }
+
+  .description-text p {
+    font-size: 14px;
+  }
+
+  .bottom-text {
+    margin-top: 20px;
   }
 }
 
@@ -1166,6 +1324,60 @@ color: var(--accent-color);
   }
   
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start; /* прижимаем всё влево */
+    justify-content: flex-start;
+    height: auto;
+    padding: 40px 20px;
+    gap: 24px;
+    text-align: left;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .footer-logo {
+    margin: 0;
+  }
+
+  .footer-logo img {
+    width: 180px;
+    height: auto;
+  }
+
+  .footer-container ul {
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .title-footer {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .footer-text {
+    font-size: 13px;
+    margin-bottom: 6px;
+    width: auto;
+  }
+
+  .widgets-footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .widgets-footer img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 /* Скрыто по умолчанию */
 .modal {
   display: none;

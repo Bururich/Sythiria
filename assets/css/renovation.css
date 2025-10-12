@@ -360,7 +360,7 @@ header {
   display: block;
   height: 50px; /* или auto, если адаптивный */
   object-fit: contain;
-  width: 70px;
+  width: 110px;
   }
     header {
     height: auto;
@@ -449,6 +449,28 @@ header {
     height: 100%;
     object-fit: cover;
 
+}
+
+@media (max-width: 768px) {
+  .renovation-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .header-renovation-container h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .header-renovation-container {
+    height: 60px;
+  }
+
+  .renovation-header {
+   height: 60px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
 }
 
 /* Renovation About Us Section */
@@ -813,14 +835,20 @@ header {
   }
 
   .stat-item {
-    height: 60px;
-    font-size: 12px;
+    height: 40px;
+    font-size: 8px;
     padding: 6px;
   }
 
   .stat-number {
-    font-size: 10px;
+    font-size: 8px;
   }
+
+  .block::before,
+.block::after {
+  width: 20px;
+  height: 20px;
+}
 
   .amenities-columns {
     grid-template-columns: repeat(4, 1fr);
@@ -828,7 +856,7 @@ header {
   }
 
   .amenities-column li {
-    font-size: 10px;
+    font-size: 7px;
     padding: 6px;
     min-height: 24px;
   }
@@ -855,10 +883,10 @@ header {
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: absolute;
-    bottom: -410px;   /* отступ от нижнего края */
+    bottom: -350px;   /* отступ от нижнего края */
     left: 200px;     /* отступ от левого края */
-    width: 170px;
-    height: 100px;
+    width: 190px;
+    height: 110px;
     object-fit: cover;
   }
   .renovation-amenities-title-image {

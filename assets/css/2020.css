@@ -39,3 +39,9 @@
     }
 }
 
+@media (max-width: 768px) {
+   .small-photo {
+       height: 170px;
+   }
+}
+
