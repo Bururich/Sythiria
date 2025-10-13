@@ -368,6 +368,7 @@ header {
   display: block;
   height: auto; /* или auto, если адаптивный */
   object-fit: contain;
+  width: 110px;
   }
     header {
     height: auto;
@@ -541,24 +542,7 @@ header {
   background: #9EC5E1;
 }
 
-@media (max-width: 480px) {
-  .card-images {
-    flex-direction: column;
-  }
 
-  .card-images img {
-    width: 100%;
-  }
-
-  .catalog-title {
-    font-size: 20px;
-  }
-
-  .details-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
 
 
 /* Скрыто по умолчанию */
@@ -774,6 +758,70 @@ input {
   to { opacity: 1; transform: scale(1); }
 }
 
+@media (max-width: 768px) {
+
+  .catalog {
+    padding: 20px;
+    padding-top: 5rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+ .card-images img {
+  width: 50%;
+  flex-direction: row;
+ } 
+
+ .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+  }
+
+  .apartment-modal-images {
+    height: 300px;
+    width: 100%;
+  }
+
+  .apartment-modal-images img {
+    max-height: 300px;
+    margin-left: 0;
+  }
+
+  .apartment-modal-info {
+    max-width: 100%;
+    max-height: auto;
+    margin-right: 0;
+    gap: 20px;
+    display: flex;
+  }
+
+  .apartment-select-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .apartment-modal-close {
+    top: 27px;
+  }
+
+  .border-line p {
+    font-size: 14px;
+  }
+
+  .border-line {
+   width:130px;
+  }
+
+  .apartment-select-btn {
+    margin-top: 40px;
+  }
+  
+}
+/* Footeer styles*/
 
 .footer-container {
   width: 100%;
