@@ -411,6 +411,12 @@ header {
    background-color: var(--hover-color)!important ;
    color: var(--blure-color) !important;
   }
+
+  .phone-icon-img {
+    width: 20px;
+    height: 20px;
+    padding-top: 6px;
+  }
 }
 
 /* Стили для страницы квартир */

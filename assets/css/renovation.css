@@ -411,6 +411,12 @@ header {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
+
+  .phone-icon-img {
+    width: 20px;
+    height: 20px;
+    padding-top: 6px;
+  }
 }
 
 .renovation-container {

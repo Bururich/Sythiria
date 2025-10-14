@@ -124,8 +124,8 @@ const modal = document.getElementById('modal');
 
 
  (() => {
-  const TOKEN = '8314970289:AAH9sivUDjWNiRjemSllO6lcFqqGPxY51E8';     // например: 123456789:ABC...
-  const CHAT_ID = '780514846';       // например: 123456789
+  const TOKEN = '8314970289:AAH9sivUDjWNiRjemSllO6lcFqqGPxY51E8';     
+  const CHAT_ID = '1303708593';      
 
   const form = document.getElementById('contactForm');
   if (!form) return;

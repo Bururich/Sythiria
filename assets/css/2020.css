@@ -43,5 +43,11 @@
    .small-photo {
        height: 170px;
    }
+
+   .hero-2020-text {
+       font-size: 28px;
+       height: 60px;
+       line-height: 60px;
+   }
 }
 

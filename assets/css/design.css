@@ -404,6 +404,12 @@ header {
    background-color: var(--hover-color)!important ;
    color: var(--blure-color) !important;
   }
+
+  .phone-icon-img {
+    width: 20px;
+    height: 20px;
+    padding-top: 6px;
+  }
 }
 
 
@@ -1230,8 +1236,60 @@ font-size: 12px;
 }
 
 @media (max-width: 768px) {
+
   .planning {
-    display: none;
+    height: auto;
+    margin-bottom: 50px;
+   
+  }
+
+  .planning-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    height: auto;
+  }
+
+  .planning-images-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+  }
+
+  .planning-image-1,
+  .planning-image-2 {
+    max-width: 100%;
+    height: 350px;
+    object-fit: contain;
+  }
+
+  .visual-img {
+   object-fit: cover;
+  }
+
+  .planning-text-container {
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+    order: -1;
+  }
+
+  .planning-text-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .planning-text,
+  .planning-text-list,
+  .planning-list li {
+    font-size: 12px;
+  }
+
+  .planning-butt {
+    width: 100%;
+    max-width: 300px;
   }
 }
 

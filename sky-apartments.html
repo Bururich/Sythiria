@@ -6,6 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <!-- Css connection -->
     <link href="assets/css/apartments.css" rel="stylesheet">
+    <link href="assets/css/sky-apartments.css" rel="stylesheet">
     
     <!-- Fonts connection -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,26 +61,50 @@
       <!-- Карточка квартиры -->
        <div class="apartment-card">
         <div class="card-header">
+          <span class="apartment-number">№21</span>
+          <span class="status ">вільна</span>
+        </div>
+        <div class="card-images">
+          <img src="./assets/img/21-apt.png" alt="План" class="plan-img" />
+          
+        </div>
+        <div class="card-info">
+          <h4>КВАРТИРА СТУДІЯ</h4>
+          <p>Площа: 33.6 м²</p>
+          <p>Поверх: 3</p>
+          <a href="#" class="details-btn apartment-details-btn" data-id="13"
+            data-number="№21"
+            data-status="вільна"
+            data-status-class="status-free"
+            data-area="33.6 м²"
+            data-floor="3"
+            data-complex="Cкай"
+            data-plan="./assets/img/21-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
+        </div>
+      </div>
+
+      <div class="apartment-card">
+        <div class="card-header">
           <span class="apartment-number">№5</span>
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-6.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-6.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/5-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 20.8 м²</p>
-          <p>Поверх: 2</p>
+          <p>Площа: 23.8 м²</p>
+          <p>Поверх: 3</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№5"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="35.4 м²"
-            data-floor="2"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-6.PNG"
-            data-interior="./assets/img/apartments-interior-6.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="22.6 м²"
+            data-floor="3"
+            data-complex="Cкай"
+            data-plan="./assets/img/5-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
@@ -89,97 +114,69 @@
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-5.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-5.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/6-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 25.3 м²</p>
-          <p>Поверх: 2</p>
+          <p>Площа: 35.3 м²</p>
+          <p>Поверх: 3</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
             data-number="№6"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="22.6 м²"
-            data-floor="2"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-5.PNG"
-            data-interior="./assets/img/apartments-interior-5.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="35.3 м²"
+            data-floor="3"
+            data-complex="Скай"
+            data-plan="./assets/img/6-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
       <div class="apartment-card">
         <div class="card-header">
-          <span class="apartment-number">№7</span>
+          <span class="apartment-number">№20</span>
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-4.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-4.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/20-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 22.5 м²</p>
-          <p>Поверх: 2</p>
+          <p>Площа: 34.5 м²</p>
+          <p>Поверх: 3</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№7"
+            data-number="№20"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="34 м²"
-            data-floor="2"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-4.PNG"
-            data-interior="./assets/img/apartments-interior-4.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="34.5 м²"
+            data-floor="3"
+            data-complex="Скай"
+            data-plan="./assets/img/20-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
       <div class="apartment-card">
         <div class="card-header">
-          <span class="apartment-number">№8</span>
+          <span class="apartment-number">№44</span>
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-2.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-2.JPG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/44-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 34 м²</p>
-          <p>Поверх: 2</p>
+          <p>Площа: 29.1 м²</p>
+          <p>Поверх: 4</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№8"
+            data-number="№44"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="25.3 м²"
-            data-floor="2"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-2.PNG"
-            data-interior="./assets/img/apartments-interior-2.JPG" onclick="openApartmentModal(this)">Детальніше</a>
-        </div>
-      </div>
-
-      <div class="apartment-card">
-        <div class="card-header">
-          <span class="apartment-number">№9</span>
-          <span class="status sold">продано</span>
-        </div>
-        <div class="card-images">
-          <img src="./assets/img/apartments-planning-1.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartment-interior-1.PNG" alt="Інтер'єр" class="interior-img" />
-        </div>
-        <div class="card-info">
-          <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 22.6 м²</p>
-          <p>Поверх: 2</p>
-          <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№9"
-            data-status="вільна"
-            data-status-class="status-sold"
-            data-area="20.8 м²"
-            data-floor="2"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-1.PNG"
-            data-interior="./assets/img/apartment-interior-1.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="29.1 м²"
+            data-floor="4"
+            data-complex="Скай"
+            data-plan="./assets/img/44-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
@@ -187,176 +184,122 @@
 
       <div class="apartment-card">
         <div class="card-header">
-          <span class="apartment-number">№10</span>
+          <span class="apartment-number">№45</span>
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-3.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-3.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/45-46-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 35.4 м²</p>
-          <p>Поверх: 2</p>
+          <p>Площа: 29.8 м²</p>
+          <p>Поверх: 4</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№10"
+            data-number="№45"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="22.5 м²"
-            data-floor="2"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-3.PNG"
-            data-interior="./assets/img/apartments-interior-3.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="29.8 м²"
+            data-floor="4"
+            data-complex="Скай"
+            data-plan="./assets/img/45-46-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
       <div class="apartment-card">
         <div class="card-header">
-          <span class="apartment-number">№13</span>
+          <span class="apartment-number">№46</span>
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-6.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-6.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/45-46-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 20.8 м²</p>
-          <p>Поверх: 3</p>
+          <p>Площа: 29.8 м²</p>
+          <p>Поверх: 4</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№13"
+            data-number="№46"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="20.8 м²"
-            data-floor="3"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-6.PNG"
-            data-interior="./assets/img/apartments-interior-6.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="29.8 м²"
+            data-floor="4"
+            data-complex="Скай"
+            data-plan="./assets/img/45-46-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
       <div class="apartment-card">
         <div class="card-header">
-          <span class="apartment-number">№14</span>
+          <span class="apartment-number">№48</span>
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-5.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-5.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/48-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 25.3 м²</p>
-          <p>Поверх: 3</p>
+          <p>Площа: 38.3 м²</p>
+          <p>Поверх: 4</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№14"
+            data-number="№48"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="25.4 м²"
-            data-floor="3"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-5.PNG"
-            data-interior="./assets/img/apartments-interior-5.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="38.3 м²"
+            data-floor="4"
+            data-complex="Скай"
+            data-plan="./assets/img/48-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
       <div class="apartment-card">
         <div class="card-header">
-          <span class="apartment-number">№15</span>
+          <span class="apartment-number">№41</span>
           <span class="status ">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-4.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-4.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/41-apt.PNG" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 22.5 м²</p>
-          <p>Поверх: 3</p>
+          <p>Площа: 34.2 м²</p>
+          <p>Поверх: 4</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№15"
+            data-number="№41"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="22.5 м²"
-            data-floor="3"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-4.PNG"
-            data-interior="./assets/img/apartments-interior-4.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="34.2 м²"
+            data-floor="4"
+            data-complex="Скай"
+            data-plan="./assets/img/41-apt.PNG"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
+     
       <div class="apartment-card">
         <div class="card-header">
-          <span class="apartment-number">№16</span>
-          <span class="status ">вільна</span>
-        </div>
-        <div class="card-images">
-          <img src="./assets/img/apartments-planning-2.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-2.JPG" alt="Інтер'єр" class="interior-img" />
-        </div>
-        <div class="card-info">
-          <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 34 м²</p>
-          <p>Поверх: 3</p>
-          <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№16"
-            data-status="вільна"
-            data-status-class="status-free"
-            data-area="22.6 м²"
-            data-floor="3"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-2.PNG"
-            data-interior="./assets/img/apartments-interior-2.JPG" onclick="openApartmentModal(this)">Детальніше</a>
-        </div>
-      </div>
-
-      <div class="apartment-card">
-        <div class="card-header">
-          <span class="apartment-number">№17</span>
+          <span class="apartment-number">№49</span>
           <span class="status">вільна</span>
         </div>
         <div class="card-images">
-          <img src="./assets/img/apartments-planning-1.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartment-interior-1.PNG" alt="Інтер'єр" class="interior-img" />
+          <img src="./assets/img/49-apt.png" alt="План" class="plan-img" />
         </div>
         <div class="card-info">
           <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 22.6 м²</p>
-          <p>Поверх: 3</p>
+          <p>Площа: 19.2 м²</p>
+          <p>Поверх: 4</p>
           <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№17"
+            data-number="№49"
             data-status="вільна"
             data-status-class="status-free"
-            data-area="35.4 м²"
-            data-floor="3"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-1.PNG"
-            data-interior="./assets/img/apartment-interior-1.PNG" onclick="openApartmentModal(this)">Детальніше</a>
-        </div>
-      </div>
-
-      <div class="apartment-card">
-        <div class="card-header">
-          <span class="apartment-number">№18</span>
-          <span class="status sold">продано</span>
-        </div>
-        <div class="card-images">
-          <img src="./assets/img/apartments-planning-3.PNG" alt="План" class="plan-img" />
-          <img src="./assets/img/apartments-interior-3.PNG" alt="Інтер'єр" class="interior-img" />
-        </div>
-        <div class="card-info">
-          <h4>КВАРТИРА СТУДІЯ</h4>
-          <p>Площа: 35.4 м²</p>
-          <p>Поверх: 3</p>
-          <a href="#" class="details-btn apartment-details-btn" data-id="13"
-            data-number="№18"
-            data-status="продано"
-            data-status-class="status-sold"
-            data-area="34 м²"
-            data-floor="3"
-            data-complex="Європейське"
-            data-plan="./assets/img/apartments-planning-3.PNG"
-            data-interior="./assets/img/apartments-interior-3.PNG" onclick="openApartmentModal(this)">Детальніше</a>
+            data-area="19.2 м²"
+            data-floor="4"
+            data-complex="Скай"
+            data-plan="./assets/img/49-apt.png"
+            onclick="openApartmentModal(this)">Детальніше</a>
         </div>
       </div>
 
