@@ -1,36 +1,43 @@
 // hero video function//
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Hero video controls
-  const video = document.getElementById('myVideo');
-  const playBtn = document.getElementById('playBtn');
+  
+ const videos = document.querySelectorAll('#myVideo');
+const buttons = document.querySelectorAll('#playBtn');
 
-  playBtn.addEventListener('click', (e) => {
+buttons.forEach((btn, index) => {
+  const video = videos[index];
+
+  if (!video) return;
+
+  btn.addEventListener('click', (e) => {
     e.stopPropagation();
     if (video.paused) {
       video.play();
-      playBtn.classList.add('hidden');
+      btn.classList.add('hidden');
     } else {
       video.pause();
-      playBtn.classList.remove('hidden');
+      btn.classList.remove('hidden');
     }
   });
 
   video.addEventListener('click', () => {
     if (!video.paused) {
       video.pause();
-      playBtn.classList.remove('hidden');
+      btn.classList.remove('hidden');
     } else {
       video.play();
-      playBtn.classList.add('hidden');
+      btn.classList.add('hidden');
     }
   });
 
   video.addEventListener('ended', () => {
-    playBtn.classList.remove('hidden');
+    btn.classList.remove('hidden');
   });
+});
 
-  // Project image change
+
+  // Project Links Image Change
   const projectLinks = {
     "project-first": {
       href: "europe.html",
