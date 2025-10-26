@@ -36,6 +36,22 @@ buttons.forEach((btn, index) => {
   });
 });
 
+const video = document.getElementById('mobile-hero');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.5 // запускается, когда 50% видео видно
+  });
+
+  observer.observe(video);
+
 
   // Project Links Image Change
   const projectLinks = {

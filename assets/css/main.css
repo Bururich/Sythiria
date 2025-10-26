@@ -58,6 +58,41 @@ section {
   scroll-margin-top: 4rem; /* высота фиксированной шапки */
 }
 
+.mobile-order {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    order: 1;
+  }
+
+  .about-us {
+    order: 2;
+  }
+
+  .global-stats {
+    order: 2;
+  }
+
+  .amenities {
+    order: 3;
+  }
+
+  .how-to-order {
+    order: 4;
+  }
+
+  .contact-us {
+    order: 5;
+  }
+  
+  .mobile-hero {
+    order: 6;
+  }
+}
+
 .container {
     display: flex;
     margin-left: 100px;
