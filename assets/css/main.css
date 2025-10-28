@@ -1373,6 +1373,8 @@ display: block;
   text-decoration: none;
   color: #000;            /* твой “black” */
   transition: color .2s;
+  font-family: var(--default-font);
+  font-weight: bold;
 }
 
 /* активная — выигрывает по специфичности у правила выше */
