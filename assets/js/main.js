@@ -2,55 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
- const videos = document.querySelectorAll('#myVideo');
-const buttons = document.querySelectorAll('#playBtn');
 
-buttons.forEach((btn, index) => {
-  const video = videos[index];
 
-  if (!video) return;
 
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (video.paused) {
-      video.play();
-      btn.classList.add('hidden');
-    } else {
-      video.pause();
-      btn.classList.remove('hidden');
-    }
-  });
-
-  video.addEventListener('click', () => {
-    if (!video.paused) {
-      video.pause();
-      btn.classList.remove('hidden');
-    } else {
-      video.play();
-      btn.classList.add('hidden');
-    }
-  });
-
-  video.addEventListener('ended', () => {
-    btn.classList.remove('hidden');
-  });
-});
-
-const video = document.getElementById('mobile-hero');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-  }, {
-    threshold: 0.5 // запускается, когда 50% видео видно
-  });
-
-  observer.observe(video);
 
 
   // Project Links Image Change
