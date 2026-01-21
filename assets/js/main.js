@@ -180,8 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Telegram form submission//
 
 (() => {
-  const TOKEN = '8314970289:AAH9sivUDjWNiRjemSllO6lcFqqGPxY51E8';    
-  const CHAT_ID = '1303708593';       
+  const TOKEN = 'Secret';    
+  const CHAT_ID = 'Secret';       
 
   const form = document.getElementById('contactForm');
   if (!form) return;
